@@ -4,45 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Fitness</title>
-
-    <h1>Lucky Fitness</h1>
-
     <link rel="stylesheet" href="style.css">
     <script type="module" src="index.js"></script>
-    <script src="setting.mjs"></script>
-    <script src="main-exercises.mjs"></script>
 
-    <div id="settings-icon" onclick="toggleSettings()">
-        <img src="setting.png" alt="Settings Icon">
-    </div>
+    <script src="main-exercises.js"></script>
 </head>
 
-<body>
 
-    <nav class="expandable-grid">
+<body>
+    <h1>Lucky Fitness</h1>
+    <div id="settings-icon" >
+    <button id="settings">
+        <img src="setting.png" alt="Settings Icon">
+    </button>
+    </div>
+
+    <div class="expandable-grid">
         <div class="expandable-box" id="myExpandableBox">
             Leg
             <div class="hidden-content">
-          
                 <p>Content 1</p>
                 <p>Content 2</p>
                 <p>Content 3</p>
-            </nav>
-
+            </div>
+        </div>
+    </div>
 
     <nav id="settings-content">
         <section>
-            <li>Personal Information</li>
-            <li>Saved Workouts</li>
-            <li>Achievements and Rewards</li>
-            <li>Fitness Goals</li>
-            <li>Audio and Visual Settings</li>
-            <li>Login</li>
-            <li>Sign Out</li>
+            <ul>
+                <li>Personal Information</li>
+                <li>Saved Workouts</li>
+                <li>Achievements and Rewards</li>
+                <li>Fitness Goals</li>
+                <li>Audio and Visual Settings</li>
+                <li>Login</li>
+                <li>Sign Out</li>
+            </ul>
         </section>
     </nav>
-</div>
+    <script src="setting.js"></script>
 </body>
-
 
 </html>

@@ -1,5 +1,12 @@
 // Add this to your existing index.js or create a new script file
+
+
+function init() {
+    document.querySelector('#settings').addEventListener('click', toggleSettings);
+}
 function toggleSettings() {
-    const settingsContent = document.getElementById("settings-content");
+    const settingsContent = document.querySelector('#settings-content');
     settingsContent.style.display = (settingsContent.style.display === "block") ? "none" : "block";
 }
+
+init()
