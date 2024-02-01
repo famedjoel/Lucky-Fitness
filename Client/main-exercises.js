@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const expandableBox = document.getElementById('myExpandableBox');
+    const expandableBox = document.querySelector('#myExpandableBox');
     
     expandableBox.addEventListener('click', function () {
         const hiddenContent = expandableBox.querySelector('.hidden-content');

@@ -1,6 +1,3 @@
-// Add this to your existing index.js or create a new script file
-
-
 function init() {
     document.querySelector('#settings').addEventListener('click', toggleSettings);
 }
