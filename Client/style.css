@@ -5,11 +5,23 @@ html, body {
 
 body {
     margin: 0;
-    background-image: url('background1.jpg');
-    background-size: cover;
-    background-position: center;
-     display: grid; 
-   grid-template-rows: auto 1fr;
+    background: linear-gradient(to bottom right, #ffb6c1, #ffffff);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.logo-container {
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
 }
 
 header {
@@ -24,7 +36,7 @@ header {
 h1 {
     text-align: center; 
     padding: 50px; 
-    color: #C0C0C0; 
+    color: #333; 
     font-size: 2.5em; 
     margin: 0; 
 }
@@ -75,14 +87,6 @@ h1 {
     height: 100vh;
 }
 
-@keyframes squatVideoAnimation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(30px); 
-    }
-}
 
 .expandable-box {
     position: absolute;
@@ -90,7 +94,7 @@ h1 {
     height: 150px;
     top: 200px;
     left: 100px;
-    background-color: #3498db;
+    background-color: #333;
     color: #fff;
     text-align: center;
     line-height: 100px;
