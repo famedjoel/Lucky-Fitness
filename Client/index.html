@@ -25,27 +25,40 @@
 
 
     <div class="expandable-grid">
-        <div class="expandable-box" id="myExpandableBox">
+        <div class="expandable-box" id="box1">
             Leg
             <div class="hidden-content">
                 <p>Content 1</p>
             </div>
+
+            <div class="expandable-box" id="box2">
+            Stomach 
+        </div>
+
+        <div class="expandable-box" id="box3">
+            Arm
+        </div>
+
+        <div class="expandable-box" id="box4">
+           Biceps
+        </div>
         </div>
     </div>
 
-    <nav id="settings-content">
+    <div id="settings-content">
         <section>
-            <ul>
-                <li>Personal Information</li>
-                <li>Saved Workouts</li>
-                <li>Achievements and Rewards</li>
-                <li>Fitness Goals</li>
-                <li>Audio and Visual Settings</li>
-                <li>Login</li>
-                <li>Sign Out</li>
-            </ul>
+            <select>
+                <option>Personal Information</option>
+                <option>Saved Workouts</option>
+                <option>Achievements and Rewards</option>
+                <option>Fitness Goals</option>
+                <option>Audio and Visual Settings</option>
+                <option>Documentation</option>
+                <option>Login</option>
+                <option>Sign Out</option>
+            </select>
         </section>
-    </nav>
+    </div>
     <script src="setting.js"></script>
 </body>
 
