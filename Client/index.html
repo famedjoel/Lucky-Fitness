@@ -19,33 +19,61 @@
     </button>
     </div>
 
-    <div class="logo-container">
+    <section class="logo-container">
         <img src="logo.png" alt="Logo" class="logo">
-    </div>
+    </section>
 
-
-    <div class="expandable-grid">
-        <div class="expandable-box" id="box1">
-            Leg
-            <div class="hidden-content">
-                <p>Content 1</p>
-            </div>
-
-            <div class="expandable-box" id="box2">
-            Stomach 
+    <section class="expandable-box" id="box1">
+        <div class="box-header" style="margin-top: -40px">
+            <p>Leg</p>
         </div>
-
-        <div class="expandable-box" id="box3">
+        <img src="squat.gif" alt="Squatting" width="80" height="auto" style="margin-bottom: 60px; border-radius:10px;">
+    
+        <section class="hidden-content popup-content">
+            <img src="close.png" alt="Close" class="close-button">
+    
+            <!-- Additional expandable box within hidden content -->
+            <section class="expandable-box">
+                Additional Box 1
+                <section class="hidden-content">
+                    <p>Additional Content 1</p>
+                </section>
+            </section>
+    
+            <!-- ADD button -->
+            <button class="add-button">ADD</button>
+        </section>
+    </section>
+    
+        <section class="expandable-box" id="box2">
+            Stomach
+            <section class="hidden-content popup-content">
+                <img src="close.png" alt="Close" class="close-button">
+                <p>Content 2</p>
+            </section>
+        </section>
+        
+    
+        <section class="expandable-box" id="box3">
             Arm
-        </div>
+            <section class="hidden-content popup-content">
+                <img src="close.png" alt="Close" class="close-button">
+                <p>Content 3</p>
+            </section>
+        </section>
+        
+        <section class="expandable-box" id="box4">
+            Biceps
+            <section class="hidden-content popup-content">
+                <img src="close.png" alt="Close" class="close-button">
+                <p>Content 4</p>
+            </section>
+        </section>
+        
+    </section>
+ 
 
-        <div class="expandable-box" id="box4">
-           Biceps
-        </div>
-        </div>
-    </div>
-
-    <div id="settings-content">
+    <section id="settings-content">
         <section>
             <select>
                 <option>Personal Information</option>
@@ -58,8 +86,9 @@
                 <option>Sign Out</option>
             </select>
         </section>
-    </div>
+    </section>
     <script src="setting.js"></script>
+
 </body>
 
 </html>
