@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom right, #ffb6c1, #ffffff);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: left;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-size: 2em;
+    margin: 20px 0 0; /* Added margin to the top */
+}
+
+#settings-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+#settings-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+#settings-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Media Query for smaller screens (e.g., iPhone 11 Pro Max) */
+@media only screen and (max-width: 414px) {
+    .logo {
+        max-width: 70px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    #settings-icon {
+        padding: 5px;
+    }
+}
+
+body {
+    background: linear-gradient(to bottom right, #ffb6c1, #ffffff);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px; /* Add padding to the body to create space at the top */
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.expandable-box {
+    width: 30%;
+    background-color: #fff;
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px; /* Adjust the right margin as needed for larger screens */
+    margin-bottom: 20px; /* Add margin at the bottom of each box */
+}
+
+.gif-container {
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.gif-container img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .expandable-box {
+        width: 80%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+    .section2 {
+        justify-content: center; /* Center the boxes horizontally on larger screens */
+    }
+
+    .expandable-box {
+        width: 30%; /* Adjust the width as needed for larger screens */
+        margin-right: 40px; /* Adjust the right margin to move the boxes more to the right on larger screens */
+    }
+}
+
+
+/* Common styles for both larger and smaller screens */
+.hidden-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.tiny-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px; /* Adjust the width to make it tiny */
+}
+
+.portrait-page {
+    padding: 20px;
+    display: flex; /* Display content in a row */
+}
+
+.portrait-page img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 15px; /* Add margin between image and text */
+}
+
+.portrait-page strong {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.portrait-page p {
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.portrait-page button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+    .hidden-content {
+        max-width: 60%; /* Adjust the maximum width as needed for larger screens */
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .hidden-content {
+        max-width: 90%; /* Adjust the maximum width as needed for smaller screens */
+    }
+}

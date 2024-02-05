@@ -45,7 +45,6 @@
 
 
 
-
     // Add this function to handle storing login state
 function rememberLogin() {
     const rememberMeCheckbox = document.getElementById('rememberMe');
