@@ -394,19 +394,31 @@
 
     <section id="settings-content">
         <section>
-            <select>
+            <select id="settings-dropdown">
                 <option>Personal Information</option>
                 <option>Saved Workouts</option>
                 <option>Achievements and Rewards</option>
                 <option>Fitness Goals</option>
                 <option>Audio and Visual Settings</option>
                 <option>Documentation</option>
-                <option>Login</option>
+                <option value="login.html">Login</option>
                 <option>Sign Out</option>
             </select>
         </section>
     </section>
     <script src="setting.js"></script>
+
+    <script>
+        const settingsDropdown = document.querySelector('#settings-dropdown');
+    
+        settingsDropdown.addEventListener('change', function() {
+            const selectedOption = this.value;
+            if (selectedOption !== "") {
+                window.location.href = selectedOption;
+            }
+        });
+    </script>
+    
 
 </body>
 

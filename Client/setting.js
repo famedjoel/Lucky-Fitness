@@ -7,3 +7,4 @@ function toggleSettings() {
 }
 
 init()
+
