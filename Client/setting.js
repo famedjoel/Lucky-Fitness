@@ -8,3 +8,11 @@ function toggleSettings() {
 
 init()
 
+const settingsDropdown = document.querySelector('#settings-dropdown');
+      
+settingsDropdown.addEventListener('change', function() {
+  const selectedOption = this.value;
+  if (selectedOption !== "") {
+    window.location.href = selectedOption;
+  }
+});
