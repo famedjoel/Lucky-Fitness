@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIIT Personal Information</title>
+  <link rel="stylesheet" href="personalinfo.css">
+  <script src="https://kit.fontawesome.com/05caef32b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fas fa-dumbbell"></i>Personal Information</h1>
+  </header>
+
+  <main>
+    <h2>Personal Details</h2>
+    <label for="firstName"><i class="fas fa-user"></i> First Name:</label>
+    <input type="text" id="firstName" value="John" required>
+
+    <label for="lastName"><i class="fas fa-user"></i> Last Name:</label>
+    <input type="text" id="lastName" value="Doe" required>
+
+    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+    <input type="email" id="email" value="john.doe@example.com" required>
+
+    <label for="mobileNumber"><i class="fas fa-phone"></i> Mobile Number:</label>
+    <input type="tel" id="mobileNumber" value="1234567890" required>
+
+    <label for="bmi"><i class="fas fa-weight"></i> BMI:</label>
+    <input type="number" id="bmi" value="25" required>
+
+    <label for="height"><i class="fas fa-arrows-alt-v"></i> Height (cm):</label>
+    <input type="number" id="height" value="175" required>
+
+    <label for="weight"><i class="fas fa-weight"></i> Weight (kg):</label>
+    <input type="number" id="weight" value="70" required>
+
+    <label for="gender"><i class="fas fa-venus-mars"></i> Gender:</label>
+    <select id="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button id="updateButton"><i class="fas fa-sync"></i> Update Information</button>
+  </main>
+
+  <div id="displayResults">
+    <h2><i class="fas fa-info-circle"></i> Updated Information</h2>
+    <p><strong><i class="fas fa-user"></i> First Name:</strong> <span id="displayFirstName">John</span></p>
+    <p><strong><i class="fas fa-user"></i> Last Name:</strong> <span id="displayLastName">Doe</span></p>
+    <p><strong><i class="fas fa-envelope"></i> Email:</strong> <span id="displayEmail">john.doe@example.com</span></p>
+    <p><strong><i class="fas fa-phone"></i> Mobile Number:</strong> <span id="displayMobileNumber">1234567890</span></p>
+    <p><strong><i class="fas fa-weight"></i> BMI:</strong> <span id="displayBMI">25</span></p>
+    <p><strong><i class="fas fa-arrows-alt-v"></i> Height (cm):</strong> <span id="displayHeight">175</span></p>
+    <p><strong><i class="fas fa-weight"></i> Weight (kg):</strong> <span id="displayWeight">70</span></p>
+    <p><strong><i class="fas fa-venus-mars"></i> Gender:</strong> <span id="displayGender">Male</span></p>
+  </div>
+
+  <script src="personalinfo.js"></script>
+</body>
+</html>

@@ -395,7 +395,7 @@
     <section id="settings-content">
         <section>
             <select id="settings-dropdown">
-                <option>Personal Information</option>
+                <option value="personalinfo.html">Personal Information</option>
                 <option>Saved Workouts</option>
                 <option>Achievements and Rewards</option>
                 <option>Fitness Goals</option>
@@ -410,15 +410,16 @@
 
     <script>
         const settingsDropdown = document.querySelector('#settings-dropdown');
-    
+      
         settingsDropdown.addEventListener('change', function() {
-            const selectedOption = this.value;
-            if (selectedOption !== "") {
-                window.location.href = selectedOption;
-            }
+          const selectedOption = this.value;
+          if (selectedOption !== "") {
+            window.location.href = selectedOption;
+          }
         });
-    </script>
-    
+      </script>
+      
+      
 
 </body>
 
