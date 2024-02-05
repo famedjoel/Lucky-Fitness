@@ -20,3 +20,4 @@ function updateInformation() {
   document.querySelector('#displayWeight').innerText = weight;
   document.querySelector('#displayGender').innerText = gender;
 }
+

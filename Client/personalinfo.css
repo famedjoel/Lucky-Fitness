@@ -16,8 +16,10 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffcc99, #ff9966);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 153, 102, 0.3);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
   }
   
   button {
