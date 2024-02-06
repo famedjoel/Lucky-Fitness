@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 hiddenContent.style.display = "block";
 
                 // Add click event listener to the close button
-                const closeButton = hiddenContent.querySelector(".close-button");
+                const closeButton = hiddenContent.querySelector(".tiny-close-button");
                 if (closeButton) {
                     closeButton.addEventListener("click", (event) => {
                         event.stopPropagation(); // Prevent the click from reaching the box
