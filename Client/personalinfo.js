@@ -21,3 +21,8 @@ function updateInformation() {
   document.querySelector('#displayGender').innerText = gender;
 }
 
+// document.querySelector('#backButton').addEventListener('click', goBack);
+
+// function goBack() {
+//     window.history.back();
+// }

@@ -109,3 +109,9 @@ function getPasswordStrengthClass(strength) {
     return classes[strength];
 }
 
+
+document.querySelector('#backButton').addEventListener('click', goBack);
+
+function goBack() {
+    window.history.back();
+}

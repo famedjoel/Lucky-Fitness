@@ -192,3 +192,24 @@ form .rows label {
 
 
 
+/* Add this style for the back button */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.back-button button {
+    padding: 10px 20px;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button button:hover {
+    background-color: #ff5252;
+}

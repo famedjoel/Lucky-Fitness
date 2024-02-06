@@ -42,3 +42,23 @@ body {
     color: #e74c3c;
   }
   
+
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.back-button button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Change to your preferred color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button button:hover {
+    background-color: #2980b9; /* Change to your preferred hover color */
+}
