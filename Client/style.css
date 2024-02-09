@@ -219,11 +219,12 @@ body {
 }
 
 .tiny-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     cursor: pointer;
     width: 20px;
+    z-index: 2; /* Ensure the close button appears above other content */
 }
 
 .portrait-container {
