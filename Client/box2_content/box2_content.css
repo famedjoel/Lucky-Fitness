@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.portrait-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0f7fa; /* Light blue background color */
+    border-radius: 15px; /* Rounded corners for the container */
+}
+
+.portrait-page {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradient background for portrait pages */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px; /* Rounded corners for the buttons */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Add this to your existing CSS */
+
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c); /* Gradient background */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling within the bottom navigation bar */
+.bottom-navbar button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect for buttons */
+.bottom-navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background on hover */
+}
+
+
+
+
+
