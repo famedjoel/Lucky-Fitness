@@ -22,7 +22,7 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
     ```bash
     npm start
 
-4. Open any Selected web browser of your choice and visit [http://localhost:8080/](http://localhost:8080/) to view the app.
+ Open any Selected web browser of your choice and visit [http://localhost:8080/](http://localhost:8080/) to view the app.
     ```
 Alternatively, use Visual Studio Code's Live Server extension by clicking **Go Live** in the bottom right corner of the status bar.
 
