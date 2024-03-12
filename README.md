@@ -39,7 +39,9 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 9. Select the Instructions
 
 # Description of the Features
-1. History: The "History" feature allows users to keep track of their exercise routines over time. This page displays a list of recorded workout sessions, showing the names of the workouts and providing users with the ability to delete entries.
+
+## Workout History Feature
+The "History" feature allows users to keep track of their exercise routines over time. This page displays a list of recorded workout sessions, showing the names of the workouts and providing users with the ability to delete entries.
 
 ### Key Components
 
@@ -54,5 +56,3 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 2. **Dynamic Rendering**: The workout history list is dynamically rendered on the page, allowing for seamless updates whenever a new workout is added or an existing one is deleted.
 
 3. **User Interaction**: Users can interact with the "Delete" button next to each workout entry to remove specific workouts from their history.
-
-2. 
