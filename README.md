@@ -82,3 +82,19 @@ The "Vault" feature in Lucky Fitness allows users to manage and customize their 
 4. **Create Workout**: The "Create HIIT" button allows users to input a workout name, adding a personal touch to their fitness routines.
 
 5. **Start Workout**: The "Start Workout" button initiates the workout, redirecting users to the main timer page.
+
+### Key Components
+
+- **Individual Exercise Start**: Users can start each exercise individually with customized durations.
+
+- **General Workout Start**: Users have the option to start a general workout directly from the "Vault" page, where a pre-defined sequence of exercises will be executed.
+
+- **Timer Display**: The app provides a clear and user-friendly timer display during workouts.
+
+### How it Works
+
+1. **Individual Exercise Start**: Users can click on a specific exercise in the "Vault" feature to start it individually. The timer will run for the specified duration of that exercise.
+
+2. **General Workout Start**: Users can click the "Start Workout" button on the "Vault" page to initiate a general workout. The app will guide users through a pre-defined sequence of exercises, displaying the timer for each.
+
+3. **Timer Display**: During both individual and general workout sessions, a timer is prominently displayed, allowing users to track their progress.
