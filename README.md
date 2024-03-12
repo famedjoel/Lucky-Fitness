@@ -83,6 +83,10 @@ The "Vault" feature in Lucky Fitness allows users to manage and customize their 
 
 5. **Start Workout**: The "Start Workout" button initiates the workout, redirecting users to the main timer page.
 
+## Starting the Workout Feature
+
+The "Starting the Workout" feature in Lucky Fitness allows users to initiate their exercise routines using a flexible and customizable timer. Users have the option to start individual exercises with specific durations or commence a general workout directly from the "Vault" page.
+
 ### Key Components
 
 - **Individual Exercise Start**: Users can start each exercise individually with customized durations.
