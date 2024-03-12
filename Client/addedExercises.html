@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../box_content.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="added-styles.css"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Workout Boxes</title>
+    <title>Added Exercises</title>
 </head>
+<body>    
+    <section id="exerciseNameInputContainer"></section>
 
-<body>
+    <button id="startWorkoutButton">Start Workout</button>
+    <section id="workout-container"  class="portrait-container">
+        <h1>Added Exercises</h1>
+
+    </section>
+
     <section class="bottom-navbar">
         <button id="historyButton">
             <i class="material-icons">history</i>History
@@ -18,17 +24,13 @@
         <button id="homeButton">
             <i class="material-icons">home</i>Home
         </button>
-        <button id="Selected-id">
-            <i class="material-icons">shopping_cart</i>MyVault
+        <button id="createWorkout">
+            <i class="material-icons">create</i>Create
         </button>
     </section>
+        
+<script src="added-script.js"></script>
 
 
-
-
-    <section id="workout-container" class="portrait-container"></section>
-
-    <script src="box2_content.js"></script>
 </body>
-
 </html>

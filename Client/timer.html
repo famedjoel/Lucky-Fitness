@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="timer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id ="myH1">StopWatch</h1> -->
+
+    <section id="container">
+        <label for="inputTime">Set Time (HH:MM:SS): </label>
+        <input type="text" id="inputTime" placeholder="00:00:00">
+        <section id="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </section>
+
+        <section id="display">00:00:00:00</section>
+    </section>
+    
+    </section>
+
+         <!-- Display exercise instructions -->
+     <section id="instructions-container">
+        <h2>Exercise Instructions</h2>
+        <section id="exercise-instructions">
+            <!-- Instructions for the selected exercise will be displayed here -->
+        </section>
+    </section>
+    
+
+
+    
+    <section class="bottom-navbar">
+        <button id="historyButton">
+            <i class="material-icons">history</i>History
+        </button>
+        <button id="homeButton">
+            <i class="material-icons">home</i>Home
+        </button>
+        <button id="Selected-id">
+            <i class="material-icons">shopping_cart</i>MyVault
+        </button>
+    </section>
+
+
+    <script src="timer.js"></script>
+</body>
+</html>

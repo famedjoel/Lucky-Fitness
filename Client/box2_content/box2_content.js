@@ -1,127 +1,223 @@
-// script.js
 
-// Function to create a workout box
+// Define an array to store added exercises
+let addedExercises = [];
+
 function createWorkoutBox(workoutData) {
     const workoutContainer = document.querySelector('#workout-container');
     const workoutBox = document.createElement('section');
     workoutBox.className = 'portrait-page';
 
+    // Set the selected exercise in localStorage
+    workoutBox.addEventListener('click', function () {
+        localStorage.setItem('selectedExercise', JSON.stringify(workoutData));
+        // window.location.href = 'timer.html';
+    });
+
     workoutBox.innerHTML = `
         <img src="${workoutData.image}" alt="GIF" style="width: 100%; height: auto; margin-bottom: 20px; border-radius: 10px;">
-        <div class="text-content">
+        <section class="text-content">
             <p style="line-height: 1;">
                 <strong style="font-size: 20px;">${workoutData.title}</strong>
             </p>
             <p style="line-height: 1;">${workoutData.description}</p>
             <img src="../Asset/alarm-clock.svg" alt="Clock Icon" width="20" height="20" style="margin-right: 400px;">
-            <p style="line-height: 1;">${workoutData.duration}</p>
+            <label for="duration">Select Duration (seconds):</label>
+            <input type="number" id="duration-${workoutData.title}" name="duration" min="1" max="59" placeholder="Enter duration" required>
             <img src="../Asset/strength.svg" alt="Strength Icon" width="20" height="20" style="margin-right: 400px;">
             <p style="line-height: 1;">${workoutData.category}</p>
             <img src="../Asset/dumbbell.svg" alt="Instrument Icon" width="20" height="20" style="margin-right: 400px;">
             <p style="line-height: 1;">${workoutData.equipment}</p>
             <button onclick="startWorkout('${workoutData.title}')">Start Workout</button>
             <button onclick="addExercise('${workoutData.title}')">Add</button>
-        </div>
+        </section>
     `;
 
     workoutContainer.appendChild(workoutBox);
 }
 
-// Example workout data (you can replace this with your actual data)
-const plankingData = {
-    title: 'PLANKING',
-    description: 'Planking is an isometric exercise that strengthens the core, shoulders, and back. It also improves posture and reduces the risk of lower back pain.',
+const plankData = {
+    title: 'PLANK',
+    description: 'The plank is a static core exercise that engages multiple muscle groups, including the abs, back, and shoulders. It helps improve core strength, stability, and endurance.',
     image: '../Asset/plank.gif',
     duration: '5 Min',
-    category: 'Strength and Mobility',
+    category: 'Core Strengthening',
     equipment: 'None',
 };
 
-const MountainClimberData = {
-    title: 'MOUNTAIN CLIMBER',
-    description: 'Mountain climbers are a great way to get your heart rate up and work your core. They are a great addition to any workout routine.',
+const mountainClimbersData = {
+    title: 'MOUNTAIN CLIMBERS',
+    description: 'Mountain climbers are a full-body workout that targets the core, shoulders, and legs. This dynamic exercise helps improve cardiovascular fitness and overall endurance.',
     image: '../Asset/mountain-climbers.gif',
     duration: '5 Min',
-    category: 'Strength and Mobility',
+    category: 'Cardio',
     equipment: 'None',
 };
 
-const BurpeesData = {
+const burpeesData = {
     title: 'BURPEES',
-    description: 'Burpees are a full-body exercise that can be done anywhere. They are great for building strength and endurance.',
+    description: 'Burpees are a full-body exercise that combines strength training and cardiovascular conditioning. It targets various muscle groups and is an efficient way to burn calories.',
     image: '../Asset/burpees.gif',
     duration: '5 Min',
-    category: 'Strength and Mobility',
+    category: 'Cardio and Strength',
     equipment: 'None',
 };
 
-const RussianTwistData = {
-    title: 'RUSSIAN TWIST',
-    description: 'Russian twists are a great exercise for building core strength and stability. They also help improve rotational power and mobility.',
-    image: '../Asset/russian-twists.gif',
+const bicycleCrunchesData = {
+    title: 'BICYCLE CRUNCHES',
+    description: 'Bicycle crunches are an effective abdominal exercise that engages the entire core. This exercise helps improve muscle endurance, flexibility, and definition.',
+    image: '../Asset/bicycle-crunches.gif',
     duration: '5 Min',
-    category: 'Strength and Mobility',
+    category: 'Core Strengthening',
     equipment: 'None',
 };
 
+const sidePlankData = {
+    title: 'SIDE PLANK',
+    description: 'Side plank is a variation of the traditional plank that targets the obliques and improves lateral stability. It helps strengthen the core and enhance overall balance.',
+    image: '../Asset/side-plank.gif',
+    duration: '5 Min',
+    category: 'Core Strengthening',
+    equipment: 'None',
+};
 
-// Create workout boxes
-createWorkoutBox(plankingData);
-createWorkoutBox(MountainClimberData);
-createWorkoutBox(BurpeesData);
-createWorkoutBox(RussianTwistData);
+// Array of exercise data
+const exercisesData = [
+    plankData,
+    mountainClimbersData,
+    burpeesData,
+    bicycleCrunchesData,
+    sidePlankData,
+];
 
+// Create workout boxes using a loop
+exercisesData.forEach(exerciseData => {
+    createWorkoutBox(exerciseData);
+});
 
 // Function placeholders for button actions
-window.startWorkout = function(title) {
+window.startWorkout = function (title) {
     console.log(`Starting workout: ${title}`);
+
+   localStorage.setItem('selectedExercise', title);
     // Add your logic for starting the workout
+
+    
+    // Navigate to the timer.html page in the same tab
+    window.location.href = 'timer.html';
+    /// Retrieve exercise details from localStorage based on the clicked workout title
+    const exerciseDetails = JSON.parse(localStorage.getItem(title));
+
+    // Check if exerciseDetails and duration are available
+    if (exerciseDetails && exerciseDetails.title && exerciseDetails.duration) {
+        console.log(`Exercise Details: ${exerciseDetails.title}, Duration: ${exerciseDetails.duration}`);
+    } else {
+        console.log("Exercise details not available.");
+    }
+    startWorkout(title);
 };
 
-window.addExercise = function(title) {
+
+
+
+// Function to add exercise to the list
+window.addExercise = function (title) {
     console.log(`Adding exercise to workout: ${title}`);
-    // Add your logic for adding exercise
+
+    // Find the exercise data based on the title
+    const exerciseData = exercisesData.find(exercise => exercise.title === title);
+
+    // Get the user-selected duration
+    const durationInput = document.querySelector(`#duration-${title}`);
+    const selectedDuration = durationInput.value;
+
+    // Update exerciseData to include the selected duration
+    exerciseData.duration = `${selectedDuration} Seconds`;
+
+    // Store exercise details (title and description) in localStorage
+    localStorage.setItem('currentExercise', JSON.stringify({ title, description: exerciseData.description }));
+
+    // Add the exercise to the array
+    addedExercises.push({ title, description: exerciseData.description, duration: exerciseData.duration, category: exerciseData.category, equipment: exerciseData.equipment });
+
+    // Store the updated added exercises array in localStorage
+    localStorage.setItem('addedExercises', JSON.stringify(addedExercises));
+
+    // Display the added exercises
+    displayAddedExercises();
+
+    // You can add further logic here, such as updating UI or triggering other actions
 };
 
 
+// Function to display added exercises
+function displayAddedExercises() {
+    // Retrieve the added exercises from localStorage
+    const addedExercises = JSON.parse(localStorage.getItem('addedExercises')) || [];
 
-
+    // Check if there are added exercises
+    if (addedExercises.length > 0) {
+        // Return the added exercises
+        return addedExercises;
+    } else {
+        // If no exercises are added, return an empty array
+        return [];
+    }
+}
 
 
 // Get references to the buttons
-const homeButton = document.getElementById('homeButton');
-const backButton = document.getElementById('backButton');
-const forwardButton = document.getElementById('forwardButton');
+const homeButton = document.querySelector('#homeButton');
+const vaultButton = document.querySelector('#Selected-id');
+const historyButton = document.querySelector('#historyButton');
 
 // Add event listeners to the buttons
-homeButton.addEventListener('click', function() {
+homeButton.addEventListener('click', function () {
     navigate('home');
 });
 
-backButton.addEventListener('click', function() {
-    navigate('back');
+vaultButton.addEventListener('click', function () {
+    navigate('MyVault');
 });
 
-forwardButton.addEventListener('click', function() {
-    navigate('forward');
+historyButton.addEventListener('click', function () {
+    navigate('history');
 });
 
 // Function for button actions
 function navigate(action) {
     switch (action) {
         case 'home':
-            // Add logic for navigating to the "index.html" page
-            window.location.href = '../index.html';
+            window.location.href = '../index.html'; // Change this to the actual home page
             break;
-        case 'back':
-            // Add logic for navigating back to the previous page
-            window.history.back();
-            break;
-        case 'forward':
-            // Add logic for navigating forward (if needed)
-            window.history.forward();
+        case 'MyVault':
+                window.location.href = '../addedExercises.html';
+                break;
+        case 'history':
+            window.location.href = '../workoutHistory.html';
             break;
         default:
             break;
     }
+}
+
+
+document.querySelector("#Selected-id").addEventListener("click", function() {
+    viewAddedExercises();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve exercise details from localStorage
+    const currentExerciseTitle = localStorage.getItem('currentExerciseTitle');
+
+    // Display exercise details on the page
+    const exerciseDetailsContainer = document.getElementById('exercise-details');
+    exerciseDetailsContainer.textContent = `Current Exercise: ${currentExerciseTitle}`;
+});
+
+// Function to navigate to the addedExercises.html page
+function viewAddedExercises() {
+    // Store the content of portrait-container in localStorage
+    const portraitContainerContent = document.querySelector('.portrait-container').innerHTML;
+    localStorage.setItem('portraitContainerContent', portraitContainerContent);
+
 }

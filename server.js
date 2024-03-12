@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 
 // Serve files from the 'client' directory
-app.use(express.static('Client'));
+app.use(express.static('client'));
 
 // make the server available on the network
 app.listen(8080);

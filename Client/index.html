@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Fitness</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="main-exercises.js"></script>
 </head>
@@ -18,7 +18,7 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#">Nutritional Plan</a></li>
+                <li><a href="addedExercises.html">Saved Workouts</a></li>
                 <li><a href="#">Fitness Goals</a></li>
             </ul>
         </nav>
@@ -26,9 +26,9 @@
         <h1>Lucky Fitness</h1>
 
         <section id="settings-icon">
-            <button id="settings">
+            <span id="settings">
                 <img src="Asset/setting.png" alt="Settings Icon">
-            </button>
+            </span>
         </section>
 
         <section>
@@ -45,14 +45,13 @@
 
     </section>
 
-    <div class="section2">
+    <section class="section2">
 
         <section class="expandable-box" id="box1">
             <p>Leg</p>
             <section class="gif-container">
                 <img src="Asset/squat.gif" alt="Squatting">
             </section>
-            <script src="index.js"></script>
         </section>
 
 
@@ -61,7 +60,6 @@
             <section class="gif-container">
                 <img src="Asset/plank.gif" alt="Planking">
             </section>
-            <script src="index.js"></script>
         </section>
 
 
@@ -118,8 +116,25 @@
             </section>
         </section>
 
-    </div>
+        <section class="bottom-navbar">
+            <button id="historyButton">
+                <i class="material-icons">history</i>History
+            </button>
+            <button id="homeButton">
+                <i class="material-icons">home</i>Home
+            </button>
+            <button id="Selected-id">
+                <i class="material-icons">shopping_cart</i>MyVault
+            </button>
+        
+            
+            
+        </section>
 
+        
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

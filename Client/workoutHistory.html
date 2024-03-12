@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Workout History</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        #history-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .workout-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .workout-item span {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .delete-button {
+            padding: 8px 12px;
+            background-color: #ff6666;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .delete-button:hover {
+            background-color: #ff3333;
+        }
+
+        /* Bottom navigation bar styling */
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c); /* Gradient background */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling within the bottom navigation bar */
+.bottom-navbar button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect for buttons */
+.bottom-navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background on hover */
+}
+
+    </style>
+</head>
+<body>
+    <section id="history-container">
+        <h1>Workout History</h1>
+        <section id="workoutHistoryList"></section>
+    </section>
+
+    <section class="bottom-navbar">
+        <button id="historyButton">
+            <i class="material-icons">history</i>History
+        </button>
+        <button id="homeButton">
+            <i class="material-icons">home</i>Home
+        </button>
+        <button id="Selected-id">
+            <i class="material-icons">shopping_cart</i>MyVault
+        </button>
+    </section>
+
+
+
+    <script>
+        // Retrieve the workout history from localStorage
+        const workoutHistory = JSON.parse(localStorage.getItem('workoutHistory')) || [];
+
+        // Display the workout history on the page
+        const workoutHistoryList = document.getElementById('workoutHistoryList');
+        workoutHistory.forEach((workoutName, index) => {
+            const workoutItem = document.createElement('section');
+            workoutItem.classList.add('workout-item');
+
+            const workoutNameElement = document.createElement('span');
+            workoutNameElement.textContent = workoutName;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('delete-button');
+            deleteButton.addEventListener('click', function() {
+                // Remove the workout from the workoutHistory array
+                workoutHistory.splice(index, 1);
+
+                // Update the workout history in localStorage
+                localStorage.setItem('workoutHistory', JSON.stringify(workoutHistory));
+
+                // Remove the workout item from the UI
+                workoutItem.remove();
+            });
+
+            workoutItem.appendChild(workoutNameElement);
+            workoutItem.appendChild(deleteButton);
+
+            workoutHistoryList.appendChild(workoutItem);
+        });
+
+        // // put the details of the execrises of the user added in the workout name the user created under each of them in the history page
+
+
+
+    </script>
+
+
+    <script>
+   // Get references to the buttons
+const homeButton = document.querySelector('#homeButton');
+const vaultButton = document.querySelector('#Selected-id');
+const historyButton = document.querySelector('#historyButton');
+
+// Add event listeners to the buttons
+homeButton.addEventListener('click', function () {
+    navigate('home');
+});
+
+vaultButton.addEventListener('click', function () {
+    navigate('MyVault');
+});
+
+historyButton.addEventListener('click', function () {
+    navigate('history');
+});
+
+// Function for button actions
+function navigate(action) {
+    switch (action) {
+        case 'home':
+            window.location.href = 'index.html'; // Change this to the actual home page
+            break;
+        case 'MyVault':
+                window.location.href = 'addedExercises.html';
+                break;
+        case 'history':
+            window.location.href = 'workoutHistory.html';
+            break;
+        default:
+            break;
+    }
+}
+
+
+    </script>
+
+    <!-- Include your additional scripts if needed -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

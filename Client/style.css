@@ -202,3 +202,39 @@ body {
     }
 }
 
+/* Bottom navigation bar styling */
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c); /* Gradient background */
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for equal spacing */
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-navbar button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.bottom-navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background on hover */
+}
+
+button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 3px;
+    border-radius: 5px; /* Rounded corners for the buttons */
+}
