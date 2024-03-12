@@ -10,7 +10,7 @@ function viewAddedExercises() {
     // Check if there are added exercises
     if (addedExercises.length > 0) {
         // Clear the workout container before displaying added exercises
-        const workoutContainer = document.queryselector('#workout-container');
+        const workoutContainer = document.querySelector('#workout-container');
         workoutContainer.innerHTML = '';
 
         // Display each added exercise in a workout box
@@ -133,14 +133,14 @@ function handleCreateWorkout() {
     });
 
     // Append input and button to the container
-    const inputContainer = document.queryselector('#exerciseNameInputContainer');
+    const inputContainer = document.querySelector('#exerciseNameInputContainer');
     inputContainer.innerHTML = ''; // Clear previous content
     inputContainer.appendChild(inputElement);
     inputContainer.appendChild(confirmButton);
 }
 
     // Use const to declare the spanElement variable
-    const spanElement = document.queryselector('#createWorkout');
+    const spanElement = document.querySelector('#createWorkout');
 
     // Add a click event listener to the span
     spanElement.addEventListener('click', handleCreateWorkout);

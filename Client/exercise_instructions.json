@@ -172,8 +172,44 @@
         "Lower your body by bending your left knee and hips.",
         "Return to the starting position and repeat on the other side."
       ]
-    }
+    },
+    "BURPEES WITH PULL-UP" : {
+      "title": "BURPEES WITH PULL-UP",
+      "instructions": [
+        "Start in a standing position.",
+        "Lower your body into a squat position and place your hands on the ground.",
+        "Kick your feet back into a push-up position.",
+        "Immediately return your feet to the squat position.",
+        "Jump up from the squat position.",
+        "Perform a pull-up."
+      ]
+    },
 
+    "RENEGADE ROW" : {
+      "title": "RENEGADE ROW",
+      "instructions": [
+        "Start in a push-up position with a dumbbell in each hand.",
+        "Perform a push-up.",
+        "Once you return to the starting position, row the right dumbbell to your side.",
+        "Return the dumbbell to the ground and repeat on the other side."
+      ]
+    },
+
+    "JUMPING ROPES" : {
+      "title": "JUMPING ROPES",
+      "instructions": [
+        "Hold the handles of the jump rope at your sides.",
+        "Swing the rope over your head and jump over it with both feet.",
+        "Continue to jump over the rope as it swings under your feet."
+      ]
+    }, 
+
+    "SPRINT" : {
+      "title": "SPRINT",
+      "instructions": [
+        "Run as fast as you can for a short distance."
+      ]
+    }
 
     
 
