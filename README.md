@@ -35,8 +35,7 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 5. Create the Name of your selected Workout
 6. Selecting the time of your choice
 7. Start,Reset,Stop the timer 
-8. Put the time 
-9. Select the Instructions
+8. Select the Instructions
 
 # Description of the Features
 
@@ -102,3 +101,71 @@ The "Starting the Workout" feature in Lucky Fitness allows users to initiate the
 2. **General Workout Start**: Users can click the "Start Workout" button on the "Vault" page to initiate a general workout. The app will guide users through a pre-defined sequence of exercises, displaying the timer for each.
 
 3. **Timer Display**: During both individual and general workout sessions, a timer is prominently displayed, allowing users to track their progress.
+
+## Selecting the Time of Your Choice Feature
+
+The "Selecting the Time of Your Choice" feature in Lucky Fitness allows users to customize their workout durations using a flexible time input. Users can set the duration for individual exercises or workout sessions, providing a tailored experience based on their preferences.
+
+### Key Components
+
+- **Time Input**: Users can input their desired workout duration in the format HH:MM:SS.
+
+- **Validation**: The app validates user input to ensure it follows the correct time format (HH:MM:SS).
+
+- **Start Button**: Initiates the timer based on the user's selected time.
+
+### How it Works
+
+1. **Time Input**: Users enter the desired workout duration in the input field provided.
+
+2. **Validation**: The app checks the input for correct time format compliance (HH:MM:SS).
+
+3. **Start Button**: Clicking the "Start" button initiates the timer for the specified duration.
+
+### Navigation
+
+- The bottom navigation bar includes buttons for quick access to other app features such as "History," "Home," and "MyVault."
+
+## Start, Reset, Stop the Timer Feature
+
+The "Start, Reset, Stop the Timer" feature in Lucky Fitness enhances the user's control during workouts. Users can initiate, reset, and stop the timer as needed, providing a more dynamic and interactive workout experience.
+
+### Key Components
+
+- **Start Button**: Begins the timer based on the selected workout duration.
+
+- **Stop Button**: Halts the ongoing timer, allowing users to pause their workout.
+
+- **Reset Button**: Clears the timer and resets it to the initial state.
+
+### How it Works
+
+1. **Start Button**: Users click the "Start" button to initiate the timer based on the selected workout duration.
+
+2. **Stop Button**: Clicking the "Stop" button halts the ongoing timer, allowing users to pause their workout.
+
+3. **Reset Button**: The "Reset" button clears the timer, resetting it to the initial state.
+
+## Select the Instructions Feature
+
+The "Select the Instructions" feature in Lucky Fitness allows users to access and view detailed instructions for each exercise stored in their personal vault. Users can select an exercise from their vault, and the app will display step-by-step instructions to guide them through the workout.
+
+### Key Components
+
+- **MyVault Area**: Users can navigate to the "MyVault" area of the app to access their stored exercises.
+
+- **Exercise Selection**: Users can select a specific exercise from their vault to view detailed instructions.
+
+- **Step-by-Step Guidance**: The app provides step-by-step instructions for each selected exercise, aiding users in performing the workout correctly.
+
+### How it Works
+
+1. **Navigate to MyVault**: Users go to the "MyVault" area within the app.
+
+2. **Exercise Selection**: Within the "MyVault," users can see a list of their stored exercises. Clicking on a specific exercise will open detailed instructions.
+
+3. **Step-by-Step Guidance**: The app displays clear and concise step-by-step instructions for the selected exercise, ensuring users perform the workout correctly.
+
+---
+
+later i plan to reference the gifs and talk where i got the idea
