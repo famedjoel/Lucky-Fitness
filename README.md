@@ -55,3 +55,4 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 
 3. **User Interaction**: Users can interact with the "Delete" button next to each workout entry to remove specific workouts from their history.
 
+2. 
