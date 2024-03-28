@@ -1,0 +1,27 @@
+[
+    {
+        "ex-id": 1,
+        "title": "SQUAT",
+        "instructions": "Stand with your feet shoulder-width apart.\nLower your body as if you're sitting back into a chair, keeping your chest up and your back straight.\nLower until your thighs are parallel to the ground.\nPush through your heels to return to the starting position.\nRepeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 2,
+        "title": "JUMPING SQUATS",
+        "instructions": "Begin with a regular squat.\nAs you come up, explode off the ground into a jump.\nLand softly and immediately go into the next squat.\nRepeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 3,
+        "title": "HIGH KNEES",
+        "instructions": "Stand with your feet hip-width apart.\nLift one knee as high as you can and quickly switch to lift the other knee.\nPump your arms in sync with your knee lifts.\nRepeat for the desired duration or number of repetitions."
+    },
+    {
+        "ex-id": 4,
+        "title": "GLUTE BRIDGE",
+        "instructions": "Lie on your back with your knees bent and feet flat on the floor, hip-width apart.\nSqueeze your glutes and lift your hips towards the ceiling until your body forms a straight line from shoulders to knees.\nHold for a moment, then lower back down.\nRepeat for the desired number of repetitions."
+    },
+    {   
+        "ex-id": 5,
+        "title": "CROSSOVER LUNGE",
+        "instructions": "Stand with your feet hip-width apart.\nTake a big step backward with your left foot, crossing it behind your right leg.\nLower your body into a lunge position.\nPush back up to the starting position and repeat on the other side.\nRepeat for the desired number of repetitions."
+    }
+]

@@ -1,9 +1,18 @@
 import express from 'express';
-// create an Express.js server (aka app)
-const app = express();
+import bodyParser from 'body-parser';
+import { setupRoutes } from './routes.js';
 
-// Serve files from the 'client' directory
+const app = express();
+const PORT = 8080;
+
+// Middleware to parse JSON bodies
+app.use(bodyParser.json());
 app.use(express.static('client'));
 
-// make the server available on the network
-app.listen(8080);
+// Setup routes
+setupRoutes(app);
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

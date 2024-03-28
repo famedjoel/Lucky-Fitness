@@ -1,191 +1,88 @@
-const display = document.querySelector('#display');
-const inputTime = document.querySelector('#inputTime');
-let timer = null
-let startTime = 0;
-let elapsedTime = 0;
-let isRunning = false;
+// timer.js
 
+let countdownInterval;
+// eslint-disable-next-line no-unused-vars
+const durationInSeconds = 0; // Default duration is 0 seconds
+const durations = [];
+let timeLeft = 0; // Current duration being counted down
+let isRestTime = false; // Flag to indicate if it's rest time
 
-// Your existing JavaScript code
-
-function parseInput(input) {
-    // Use regular expression to match different time formats
-    const regex = /^(\d{1,2}):?(\d{1,2})?:?(\d{1,2})?$/;
-    const match = input.match(regex);
-
-    if (match) {
-        const [, hours = '0', minutes = '0', seconds = '0'] = match;
-        return {
-            hours: parseInt(hours, 10),
-            minutes: parseInt(minutes, 10),
-            seconds: parseInt(seconds, 10),
-        };
-    }
-
-    return null;
-}
-
-function start() {
-    if (!isRunning) {
-        const userInput = parseInput(inputTime.value);
-
-        if (userInput) {
-            startTime = Date.now() + userInput.hours * 3600000 + userInput.minutes * 60000 + userInput.seconds * 1000;
-            update();
-            timer = setInterval(update, 10);
-            isRunning = true;
-        } else {
-            // Handle invalid input
-            alert('Invalid time format. Please use HH:MM:SS');
+// Function to start the timer with adjusted rest times
+export function startTimer(difficulty) {
+  clearInterval(countdownInterval);
+  if (timeLeft === 0) {
+    timeLeft = durations.shift(); // Get the first duration from the array
+  }
+  countdownInterval = setInterval(() => {
+    updateTimer();
+    timeLeft--;
+    if (timeLeft < 0) {
+      clearInterval(countdownInterval);
+      isRestTime = !isRestTime; // Toggle rest time flag
+      if (isRestTime) {
+        timeLeft = 120; // Default rest time
+        // Adjust rest time based on difficulty
+        if (difficulty === 'easy') {
+          timeLeft -= 30; // Reduce rest time by 30 seconds for easy difficulty
+        } else if (difficulty === 'hard') {
+          timeLeft += 30; // Increase rest time by 30 seconds for hard difficulty
         }
+      } else {
+        // change the HTML as one workout is finished
+        timeLeft = durations.shift(); // Get the next exercise duration from the array
+      }
+      startTimer(); // Start the timer for the next duration
     }
+  }, 1000);
 }
 
-// Your existing JavaScript code
+// Function to update the timer display
+export function updateTimer() {
+  const timerDisplay = document.querySelector('#timer-display');
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
 
-function stop() {
-    if(isRunning) {
-        clearInterval(timer);
-        elapsedTime = Date.now() - startTime;
-        isRunning = false;
-    }
-}
-
-function reset() {
-    clearInterval(timer);
-    startTime = 0;
-    elapsedTime = 0;
-    isRunning = false;
-    display.textContent = '00:00:00.00';
-}
-
-function update() {
-    const remainingTime = Math.max(0, startTime - Date.now()); // Ensure remaining time is not negative
-
-    let hours = Math.floor(remainingTime / (1000 * 60 * 60));
-    let minutes = Math.floor(remainingTime / (1000 * 60) % 60);
-    let seconds = Math.floor(remainingTime / 1000 % 60);
-    let milliseconds = Math.floor(remainingTime % 1000 / 10);
-
-    hours = String(hours).padStart(2, '0');
-    minutes = String(minutes).padStart(2, '0');
-    seconds = String(seconds).padStart(2, '0');
-    milliseconds = String(milliseconds).padStart(2, '0');
-
-    display.textContent = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-
-    if (remainingTime === 0) {
-        clearInterval(timer);
-        isRunning = false;
-        // Optionally, you can perform any actions when the timer reaches zero here
-    }
-}
-
-
-const startBtn = document.querySelector('#startBtn');
-const stopBtn = document.querySelector('#stopBtn');
-const resetBtn = document.querySelector('#resetBtn');
-
-startBtn.addEventListener('click', start);
-stopBtn.addEventListener('click', stop);
-resetBtn.addEventListener('click', reset);
-
-
-// Get references to the buttons
-const homeButton = document.querySelector('#homeButton');
-const vaultButton = document.querySelector('#Selected-id');
-const historyButton = document.querySelector('#historyButton');
-
-// Add event listeners to the buttons
-homeButton.addEventListener('click', function () {
-    navigate('home');
-});
-
-vaultButton.addEventListener('click', function () {
-    navigate('MyVault');
-});
-
-historyButton.addEventListener('click', function () {
-    navigate('history');
-});
-
-// Function for button actions
-function navigate(action) {
-    switch (action) {
-        case 'home':
-            window.location.href = 'index.html'; // Change this to the actual home page
-            break;
-        case 'MyVault':
-                window.location.href = 'addedExercises.html';
-                break;
-        case 'history':
-            window.location.href = 'workoutHistory.html';
-            break;
-        default:
-            break;
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Retrieve the selected exercise from localStorage
-    const selectedExercise = JSON.parse(localStorage.getItem('selectedExercise'));
-
-    // Log the selected exercise
-    console.log('Selected Exercise:', selectedExercise);
-
-    // Check if selectedExercise is available
-    if (selectedExercise && selectedExercise.title) {
-        // Display exercise details in the console (you can remove this line)
-        console.log(`Exercise Details: ${selectedExercise.title}`);
-
-        // Load exercise instructions from JSON file
-        loadExerciseInstructions(selectedExercise.title);
+  if (isRestTime) {
+    timerDisplay.textContent = `REST TIME: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  } else {
+    if (timeLeft > 0) {
+      timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     } else {
-        console.log("Exercise details not available.");
+      timerDisplay.textContent = '0:00';
     }
-});
-
-
-
-// ... (rest of the code remains the same)
-
-
-// Function to load exercise instructions from JSON file
-function loadExerciseInstructions(title) {
-    // Fetch the exercise instructions JSON file
-    fetch('exercise_instructions.json')
-        .then(response => response.json())
-        .then(instructions => {
-            // Check if instructions are available for the selected exercise
-            if (instructions && instructions[title]) {
-                // Display exercise instructions in the instructions container
-                displayExerciseInstructions(instructions[title]);
-            } else {
-                console.log(`Instructions not available for ${title}.`);
-            }
-        })
-        .catch(error => {
-            console.error('Error loading exercise instructions:', error);
-        });
+  }
+  // timerDisplay.textContent = currentDuration;
 }
 
+// Function to update the timer display with adjusted rest times based on difficulty
+export function updateTimerDisplay(difficulty) {
+  const exerciseContainers = document.querySelectorAll('#content2 .exercise-info');
+  let totalDurationSeconds = 0;
 
-// Function to display exercise instructions
-function displayExerciseInstructions(exercise) {
-    console.log('DOM content loaded');
-    // Get the instructions container
-    const instructionsContainer = document.querySelector('#exercise-instructions');
+  // Calculate rest time adjustment based on difficulty
+  let restTimeAdjustment = 0;
+  if (difficulty === 'easy') {
+    restTimeAdjustment = -30; // Reduce rest time by 30 seconds for easy difficulty
+  } else if (difficulty === 'hard') {
+    restTimeAdjustment = 30; // Increase rest time by 30 seconds for hard difficulty
+  }
 
-    // Create HTML elements for instructions
-    const instructionsHTML = `
-        <p><strong>${exercise.title}</strong></p>
-        <ul>
-            ${exercise.instructions.map(instruction => `<li>${instruction}</li>`).join('')}
-        </ul>
-    `;
+  // Iterate through each exercise container
+  exerciseContainers.forEach(container => {
+    const durationInput = container.querySelector('input[type="number"]');
+    if (durationInput) {
+      let duration = parseInt(durationInput.value) * 60; // Convert minutes to seconds
+      if (container !== exerciseContainers[exerciseContainers.length - 1]) {
+        duration += restTimeAdjustment; // Adjust rest time
+      }
+      durations.push(duration); // Add exercise duration to the array
+      totalDurationSeconds += duration;
+    }
+  });
 
-    // Set the instructions HTML in the container
-    instructionsContainer.innerHTML = instructionsHTML;
+  // Display the total duration in minutes and seconds
+  const minutes = Math.floor(totalDurationSeconds / 60);
+  const seconds = totalDurationSeconds % 60;
+  const timerDisplay = document.querySelector('#timer-display');
+  timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
-
-
