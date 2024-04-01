@@ -12,41 +12,46 @@ export function addToHistory(hiitName, exercises) {
   }
 }
 
-// Function to display history or a message indicating that the history is empty
 export function displayHistory() {
   const historyList = document.querySelector('#history-list');
   historyList.innerHTML = ''; // Clear existing content
 
   const username = localStorage.getItem('loggedInUser');
   const historyData = JSON.parse(localStorage.getItem('historyData')) || [];
+  const historyItemTemplate = document.querySelector('#historyItemTemplate');
 
   if (username && historyData.length > 0) {
     // User is logged in and there is history data
     historyData.forEach((item, index) => {
-      const listItem = document.createElement('li');
-      // Check if username exists
+      const listItemInstance = historyItemTemplate.content.cloneNode(true);
+
+      // Populate account name if it exists
       if (item.username) {
-        listItem.innerHTML = `<strong>Account name:</strong> ${item.username} <br>`;
+        const accountNameElement = listItemInstance.querySelector('.account-name');
+        accountNameElement.textContent = `Account name: ${item.username}`;
       }
-      listItem.innerHTML += `<strong>HIIT name:</strong> ${item.hiitName} `;
-      // Format and append each exercise
-      const exercisesList = document.createElement('ul');
+
+      // Populate HIIT name
+      const hiitNameElement = listItemInstance.querySelector('.hiit-name');
+      hiitNameElement.textContent = `HIIT name: ${item.hiitName}`;
+
+      // Format and populate exercises
+      const exercisesListElement = listItemInstance.querySelector('.exercises-list');
       item.exercises.forEach(exercise => {
         const exerciseItem = document.createElement('li');
         exerciseItem.textContent = `${exercise.title} (${exercise.duration} mins)`;
-        exercisesList.appendChild(exerciseItem);
+        exercisesListElement.appendChild(exerciseItem);
       });
-      listItem.appendChild(exercisesList);
-      // Create delete button
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
-      deleteButton.classList.add('delete-button'); // Add delete button class
+
+      // Add event listener to delete button
+      const deleteButton = listItemInstance.querySelector('.delete-button');
       deleteButton.addEventListener('click', function () {
         deleteHistoryItem(index);
         displayHistory(); // Refresh the history list after deletion
       });
-      listItem.appendChild(deleteButton); // Append delete button to the list item
-      historyList.appendChild(listItem); // Append list item to the history list
+
+      // Append the populated item to the history list
+      historyList.appendChild(listItemInstance);
     });
   } else {
     // User is not logged in or there is no history data

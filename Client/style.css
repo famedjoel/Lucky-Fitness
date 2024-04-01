@@ -1,5 +1,5 @@
 body {
-    background-color: #ff99cc;  
+    background-color: #ff99cc;
     background-image: radial-gradient(circle, #ff99cc, #ff66cc);
     margin: 0;
     padding: 0;
@@ -82,8 +82,10 @@ body {
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
     .logo {
-        max-width: 50px; /* Adjust the maximum width for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
+        max-width: 50px;
+        /* Adjust the maximum width for smaller screens */
+        padding: 10px;
+        /* Adjust padding for smaller screens */
     }
 }
 
@@ -123,14 +125,18 @@ h1 {
 
 
 .section2 {
-    background-color: #ffffff; /* Set background color for section 2 */
-    padding: 20px; /* Add padding for content */
-    margin-top: 60px; /* Adjust margin to move the section up */
+    background-color: #ffffff;
+    /* Set background color for section 2 */
+    padding: 20px;
+    /* Add padding for content */
+    margin-top: 60px;
+    /* Adjust margin to move the section up */
 }
 
 
 .section2 h2 {
-    text-align: center; /* Center-align the heading */
+    text-align: center;
+    /* Center-align the heading */
 }
 
 .button-container {
@@ -170,12 +176,14 @@ h1 {
 .content.hidden {
     display: none;
 }
+
 /* Exercise box styles within #content1 */
 #content1 {
     /* display: flex; */
     /* flex-wrap: wrap;
     justify-content: center; */
-    text-align: center; /* Center-align the portrait boxes */
+    text-align: center;
+    /* Center-align the portrait boxes */
 
 }
 
@@ -184,24 +192,34 @@ h1 {
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 20px;
-    color: #333; /* Adjust the color as needed */
+    color: #333;
+    /* Adjust the color as needed */
 }
 
 /* Style for each portrait box */
 .workout-portrait {
-    display: inline-block; /* Display portrait boxes horizontally */
-    width: calc(25% - 20px); /* Set initial width (adjust as needed) */
-    margin: 10px; /* Adjust margin as needed */
+    display: inline-block;
+    /* Display portrait boxes horizontally */
+    width: calc(25% - 20px);
+    /* Set initial width (adjust as needed) */
+    margin: 10px;
+    /* Adjust margin as needed */
     padding: 10px;
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
-    vertical-align: top; /* Align portrait boxes to the top */
-    background: linear-gradient(45deg, #3498db, #e74c3c); /* White to orange gradient background */
+    border-radius: 10px;
+    /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add box-shadow for depth */
+    vertical-align: top;
+    /* Align portrait boxes to the top */
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    /* White to orange gradient background */
 }
 
 .workout-portrait img {
-    width: 70%; /* Ensure the image fills the container */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    width: 70%;
+    /* Ensure the image fills the container */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
 }
 
 .exercise-info {
@@ -209,43 +227,62 @@ h1 {
 }
 
 .exercise-info h2 {
-    font-size: 1.2em; /* Adjust font size for exercise title */
-    margin-top: 0; /* Remove default margin */
+    font-size: 1.2em;
+    /* Adjust font size for exercise title */
+    margin-top: 0;
+    /* Remove default margin */
 }
 
 .exercise-info p {
-    font-size: 1em; /* Adjust font size for exercise description */
-    margin-top: 5px; /* Add some space between title and description */
+    font-size: 1em;
+    /* Adjust font size for exercise description */
+    margin-top: 5px;
+    /* Add some space between title and description */
 }
 
 .exercise-info .duration-input {
-    margin-top: 10px; /* Add margin between category/equipment and duration input */
+    margin-top: 10px;
+    /* Add margin between category/equipment and duration input */
 }
 
 .exercise-info .duration-input label {
-    display: block; /* Make label block-level for proper spacing */
+    display: block;
+    /* Make label block-level for proper spacing */
 }
 
 .exercise-info .duration-input input {
-    width: 100%; /* Ensure input fills the container */
-    padding: 5px; /* Add padding for input */
-    border: 1px solid #ccc; /* Add border for input */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    width: 100%;
+    /* Ensure input fills the container */
+    padding: 5px;
+    /* Add padding for input */
+    border: 1px solid #ccc;
+    /* Add border for input */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
 }
 
 .exercise-info button {
-    margin-top: 10px; /* Add margin between duration input and button */
-    padding: 5px 10px; /* Adjust button padding */
-    background-color: #007bff; /* Add background color for button */
-    color: #fff; /* Set text color for button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    cursor: pointer; /* Add cursor pointer on hover */
-    transition: background-color 0.3s; /* Add transition effect */
+    margin-top: 10px;
+    /* Add margin between duration input and button */
+    padding: 5px 10px;
+    /* Adjust button padding */
+    background-color: #007bff;
+    /* Add background color for button */
+    color: #fff;
+    /* Set text color for button */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
+    cursor: pointer;
+    /* Add cursor pointer on hover */
+    transition: background-color 0.3s;
+    /* Add transition effect */
 }
 
 .exercise-info button:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #0056b3;
+    /* Change background color on hover */
 }
 
 /* Style for search button */
@@ -268,13 +305,17 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #007bff; /* Add background color */
-    color: #fff; /* Add text color */
-    transition: background-color 0.3s ease; /* Add transition effect */
+    background-color: #007bff;
+    /* Add background color */
+    color: #fff;
+    /* Add text color */
+    transition: background-color 0.3s ease;
+    /* Add transition effect */
 }
 
 .search-container button:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #0056b3;
+    /* Change background color on hover */
 }
 
 /* Adjustments for the input field */
@@ -283,13 +324,15 @@ h1 {
     margin-right: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex: 1; /* Take up remaining space */
+    flex: 1;
+    /* Take up remaining space */
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .workout-portrait {
-        width: calc(80% - 20px); /* Adjust width for smaller screens */
+        width: calc(80% - 20px);
+        /* Adjust width for smaller screens */
     }
 }
 
@@ -301,8 +344,10 @@ h1 {
 }
 
 .message {
-    background-color: #e6f7ff; /* Light blue for success message */
-    color: #007bff; /* Blue text */
+    background-color: #e6f7ff;
+    /* Light blue for success message */
+    color: #007bff;
+    /* Blue text */
 }
 
 /* Style for login/logout buttons */
@@ -374,11 +419,13 @@ h1 {
 }
 
 .input-container input[type="text"] {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
+    /* Take up remaining space */
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px; /* Adjust spacing between input and button */
+    margin-right: 10px;
+    /* Adjust spacing between input and button */
     box-sizing: border-box;
 }
 
@@ -428,19 +475,30 @@ h1 {
 }
 
 
+#history-list li span {
+    font-weight: bold;
+}
+
 /* CSS for the delete button */
 .delete-button {
     padding: 5px 10px;
-    background-color: #dc3545; /* Red color for delete button */
-    color: #fff; /* White text color */
-    border: none; /* Remove button border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor style on hover */
-    transition: background-color 0.3s; /* Smooth transition effect */
+    background-color: #dc3545;
+    /* Red color for delete button */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition effect */
 }
 
 .delete-button:hover {
-    background-color: #c82333; /* Darker red color on hover */
+    background-color: #c82333;
+    /* Darker red color on hover */
 }
 
 /* Timer display */
@@ -471,14 +529,18 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .input-container label {
-    margin-right: 10px; /* Add margin to separate the label from the selector */
+    margin-right: 10px;
+    /* Add margin to separate the label from the selector */
 }
+
 .input-container select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px; /* Add margin to separate the selector from the buttons */
+    margin-right: 10px;
+    /* Add margin to separate the selector from the buttons */
 }
 
 /* Start button */
@@ -510,6 +572,7 @@ h1 {
 #reset-workout-btn:hover {
     background-color: #0056b3;
 }
+
 /* Media Query for small screens */
 @media only screen and (max-width: 600px) {
     .input-container {
@@ -523,8 +586,10 @@ h1 {
 
     /* Increase size of input bar */
     #hiit-duration {
-        width: 80%; /* Adjust the width as needed */
-        max-width: 200px; /* Optional: Set a max-width to prevent it from becoming too wide */
+        width: 80%;
+        /* Adjust the width as needed */
+        max-width: 200px;
+        /* Optional: Set a max-width to prevent it from becoming too wide */
     }
 }
 
@@ -541,7 +606,8 @@ h1 {
 #exercise-instructions h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #333; /* Text color */
+    color: #333;
+    /* Text color */
 }
 
 #exercise-instructions ul {
@@ -567,8 +633,12 @@ h1 {
 } */
 
 /* Style buttons */
-#profile-joel, #profile-paschal, #profile-tanna, #profile-update-button {
-    background-color: #4CAF50; /* Green */
+#profile-joel,
+#profile-paschal,
+#profile-tanna,
+#profile-update-button {
+    background-color: #4CAF50;
+    /* Green */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -579,64 +649,69 @@ h1 {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 8px;
-  }
+}
 
-  /* Hover effect for #profile-joel button */
+/* Hover effect for #profile-joel button */
 #profile-joel:hover {
-    background-color: #45a049; /* Darker green */
-  }
-  
-  /* Hover effect for #profile-paschal button */
-  #profile-paschal:hover {
-    background-color: #388e3c; /* Dark green */
-  }
-  
-  /* Hover effect for #profile-tanna button */
-  #profile-tanna:hover {
-    background-color: #1b5e20; /* Darkest green */
-  }
-  
-  /* Hover effect for #profile-update-button */
-  #profile-update-button:hover {
-    background-color: #0077b6; /* Dark blue */
-  }
+    background-color: #45a049;
+    /* Darker green */
+}
+
+/* Hover effect for #profile-paschal button */
+#profile-paschal:hover {
+    background-color: #388e3c;
+    /* Dark green */
+}
+
+/* Hover effect for #profile-tanna button */
+#profile-tanna:hover {
+    background-color: #1b5e20;
+    /* Darkest green */
+}
+
+/* Hover effect for #profile-update-button */
+#profile-update-button:hover {
+    background-color: #0077b6;
+    /* Dark blue */
+}
 
 /* Style form */
 #profile-form {
     margin-top: 20px;
-  }
-  
-  /* Style form label */
-  label {
+}
+
+/* Style form label */
+label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  /* Style input field */
-  input[type=text] {
+}
+
+/* Style input field */
+input[type=text] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
-  
-  /* Style submit button */
-  #profile-update-button {
+}
+
+/* Style submit button */
+#profile-update-button {
     background-color: #008CBA;
-  }
-  
-  /* Style welcome message container */
-  #welcome-message-container {
+}
+
+/* Style welcome message container */
+#welcome-message-container {
     margin-top: 20px;
-  }
-  
-  /* Style welcome message */
-  #welcome-message {
+}
+
+/* Style welcome message */
+#welcome-message {
     font-size: 20px;
     color: #333;
-  }
+}
+
 .profile-buttons {
     display: flex;
     justify-content: center;

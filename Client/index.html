@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<script src="script.js" type="module" defer></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Dynamic Exercise Boxes</title>
+    <meta charset="UTF-8">
+    <script src="script.js" type="module" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Exercise Boxes</title>
 
 </head>
+
 <body>
     <section class="section1">
 
@@ -44,10 +46,10 @@
 
     <section class="section2">
 
-<!-- Add a container for the welcome message -->
-<section id="welcome-message-container" style="display: none;">
-    <h2 id="welcome-message"></h2>
-</section>
+        <!-- Add a container for the welcome message -->
+        <section id="welcome-message-container" style="display: none;">
+            <h2 id="welcome-message"></h2>
+        </section>
 
         <section class="button-container">
             <button id="button1">Exercises</button>
@@ -65,7 +67,7 @@
             <p>Welcome to my Exercise Page</p>
         </section>
 
-        <section id="content2" class="content hidden">   
+        <section id="content2" class="content hidden">
             <button id="start-Hiit-Workout">Start Hiit Workout</button>
             <section class="input-container">
                 <input type="text" id="hiit-input" placeholder="Enter a name of your choice">
@@ -73,10 +75,11 @@
             </section>
             <p id="workout-text">Content for your Hiit Workout World...</p>
         </section>
-        
-        
+
+
         <section id="content3" class="content hidden">
             <h2>History</h2>
+            <p>Content for your History world...</p>
             <ul id="history-list"></ul>
         </section>
 
@@ -92,54 +95,67 @@
                         <option value="hard">Hard</option>
                     </select>
                 </section>
-                
+
                 <button id="start-workout-btn">Start</button>
                 <button id="stop-workout-btn">Stop</button>
                 <button id="reset-workout-btn">Reset</button>
             </section>
             <section id="timer-display">0:00</section>
-            <section id="exercise-instructions"></section>            
+            <section id="exercise-instructions"></section>
         </section>
 
-                <section id="content5" class="content">
+        <section id="content5" class="content">
             <h2>Profile</h2>
             <p>Content for your Profile world...</p>
+            <p>Click on the below Names to be logged In😁</p>
 
-                   <!-- Add profile buttons -->
-<section class="profile-buttons">
-<button id="profile-joel">Joel</button>
-<button id="profile-paschal">Paschal</button>
-<button id="profile-tanna">Tanna</button>
-</section>
+            <!-- Add profile buttons -->
+            <section class="profile-buttons">
+                <button id="profile-joel">Joel</button>
+                <button id="profile-paschal">Paschal</button>
+                <button id="profile-tanna">Tanna</button>
+            </section>
 
-<p>If the current Profile name is not to your liking, feel free to update it to your preferred choice</p>
+            <p>If the current Profile name is not to your liking, feel free to update it to your preferred choice</p>
 
-  <!-- Profile update form -->
-  <form id="profile-form">
-    <label for="new-profile-name">New Profile Name:</label>
-    <input type="text" id="new-profile-name" name="new-profile-name" required>
-    <button id="profile-update-button" type="submit">Update Profile</button>
-</form>
-      </section>
+            <!-- Profile update form -->
+            <form id="profile-form">
+                <label for="new-profile-name">New Profile Name:</label>
+                <input type="text" id="new-profile-name" name="new-profile-name" required>
+                <button id="profile-update-button" type="submit">Update Profile</button>
+            </form>
+        </section>
 
     </section>
-    
+
     <template id="temp-portrait">
         <section class="workout-portrait">
-        <img src="logo.png" alt="Exercise Image">
-        <section class="exercise-info"> 
-            <h2 class="workout-title">Workout title</h2>
-            <p class="workout-description"></p>
-            <section class="duration-input">
-            <label>Select Duration (mins):</label>
-            <input type="number" name="duration" min="1" max="60" required class = "workout-duration">
-        </section>        
-            <p class="workout-category"></p>
-            <p class="workout-equipment"></p>
-            <p class="workout-instructions"></p>
-            <button class="workout-add">Add Exercise</button>
-            </section> 
+            <img src="logo.png" alt="Exercise Image">
+            <section class="exercise-info">
+                <h2 class="workout-title">Workout title</h2>
+                <p class="workout-description"></p>
+                <section class="duration-input">
+                    <label>Select Duration (mins):</label>
+                    <input type="number" name="duration" min="1" max="60" required class="workout-duration">
+                </section>
+                <p class="workout-category"></p>
+                <p class="workout-equipment"></p>
+                <p class="workout-instructions"></p>
+                <button class="workout-add">Add Exercise</button>
+            </section>
         </section>
     </template>
+
+    <template id="historyItemTemplate">
+        <li>
+            <span class="account-name"></span>
+            <br>
+            <span class="hiit-name"></span>
+            <ul class="exercises-list"></ul>
+            <button class="delete-button">Delete</button>
+        </li>
+    </template>
+
 </body>
+
 </html>
