@@ -3,140 +3,162 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="script.js" type="module" defer></script>
+    <script src="./scripts/script.mjs" type="module" defer></script>
+    <script src="./scripts/index.mjs" type="module" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dynamic Exercise Boxes</title>
-
+    <link rel="shortcut icon" type="image/png" href="192.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Lucky Fitness</title>
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
     <section class="section1">
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Fitness Goals</a></li>
-            </ul>
-        </nav>
-
-
         <h1>Lucky Fitness</h1>
-
         <section id="settings-icon">
             <span id="settings">
-                <img src="Asset/setting.png" alt="Settings Icon">
+                <img src="Asset/LND.png" alt="Settings Icon" id="mode-toggle">
             </span>
         </section>
 
-        <section>
-            <img src="Asset/logo.png" alt="Logo" class="logo">
+        <section class="navbar">
+            <button id="button6" class="nav-button" data-target="content6">Progress</button>
+            <button id="button5" class="nav-button" data-target="content5">Favorites</button>
         </section>
+    </section>
+    <section class="section2">
+        <section class="button-container">
+            <button id="button0" data-target="content0">Home</button>
+            <button id="button1" data-target="content1">Exercises</button>
+            <button id="button2" data-target="content2">Customize HiiT</button>
+            <button id="button4" data-target="content4">Saved HiiT</button>
+            <button id="button3" data-target="content3">History</button>
 
-        <section id="settings-content">
-            <section>
-                <a href="settings.html"><img src="settings-icon.png" alt="Settings Icon"></a>
+        </section>
+        <section id="content0" class="content">
+            <p>Welcome to my Home Page</p>
+            <section class="home-container">
+                <h1>Little Navigation</h1>
+                <p>You can click other buttons and see the fun</p>
+                <p>1. Go to Exercise Page
+                    <button id="button1" data-target="content1">Exercises</button>
+                </p>
+                <p>2. Add any Exercise of your choice and you will see where it has been added too</p>
+                <p>3. In the Customize Workout Page, you will see the exercises you added then create and activity
+                    <button id="button2" data-target="content2">Customize HiiT</button>
+                </p>
+                <p>4. In the Workout Station, you will see the Workout you created
+                    <button id="button4" data-target="content4">Saved HiiT</button>
+                </p>
+                <p>5. Then you can Start your activities</p>
+                <p>6. You can also edit your Activity duration exercises/name in Workout Station</p>
+                <p>7. If you dont like that one you can clear the activity and added fresh ones and redo same steps
+                    <button id="button1" data-target="content1">Exercises</button>
+                </p>
+                <p>8. You can also view your history after refresh
+                    <button id="button3" data-target="content3">History</button>
+                </p>
+                <p> Have fun😁</p>
             </section>
         </section>
-
-        <script src="setting.js"></script>
-
-    </section>
-
-
-    <section class="section2">
-
-        <!-- Add a container for the welcome message -->
-        <section id="welcome-message-container" style="display: none;">
-            <h2 id="welcome-message"></h2>
-        </section>
-
-        <section class="button-container">
-            <button id="button1">Exercises</button>
-            <button id="button2">Create Hiit Workout</button>
-            <button id="button4">Timer</button>
-            <button id="button3">History</button>
-            <button id="button5">Profile</button>
-        </section>
-        <section id="content1" class="content">
-            <p>Go to Profile Section to be logged In</p>
+        <section id="content1" class="content hidden">
+            <p>Welcome to my Exercise Page</p>
             <section class="search-container">
                 <input type="text" id="searchInput" placeholder="Search exercises...">
                 <button id="seacrh-btn">Search</button>
             </section>
-            <p>Welcome to my Exercise Page</p>
-        </section>
+            <section id="content1-portrait-container"></section>
+            <section id="hidden-exercises" style="display: none;"></section>
 
+            <!-- "Show More Exercises" button -->
+            <button id="show-more-btn">Show More Exercises</button>
+            <!-- Hidden container for remaining exercises -->
+
+        </section>
         <section id="content2" class="content hidden">
-            <button id="start-Hiit-Workout">Start Hiit Workout</button>
-            <section class="input-container">
-                <input type="text" id="hiit-input" placeholder="Enter a name of your choice">
-                <button id="create-hiit-workout">Save Hiit Workout</button>
+            <p id="workout-text">Content for your Hiit Builder World...</p>
+            <!-- Activity builder section -->
+            <section id="activity-builder">
+                <h2>HiiT Builder</h2>
+                <label for="activity-name">HiiT Name:</label>
+                <input type="text" id="activity-name" placeholder="Enter HiiT Name">
+                <section id="activity-message"></section>
+                <label for="rest-time">Rest Time (minutes):</label>
+                <input type="number" id="rest-time" min="1" placeholder="Enter rest time">
+
+                <!-- Add weight input field -->
+                <label for="user-weight">Your Weight (kg):</label>
+                <input type="number" id="user-weight" min="1" placeholder="Enter your weight">
+
+                <button id="save-activity-btn">Save HiiT</button>
+                <button id="clear-activity-btn">Clear Workout</button>
             </section>
-            <p id="workout-text">Content for your Hiit Workout World...</p>
         </section>
+        <section id="content4" class="content hidden">
+            <h2>Hiit Station</h2>
+            <p>Content for your Hiit Station...</p>
+            <!-- Container to hold activities -->
+            <section id="activity-container"></section>
+            <!-- Template for activity/workout -->
+            <template id="activity-template">
+                <section class="activity">
+                    <!-- Container to hold exercises for this activity -->
+                    <section class="activity-exercises"></section>
+                    <section class="timer">0:00</section>
+                </section>
+            </template>
+            <section id="activity-info">
+                <span>Current Activity:</span>
+                <span id="current-activity"></span>
+                <span>Next Activity:</span>
+                <span id="next-activity"></span>
+            </section>
+            <section id="workout-info">
+                <h3 id="workout-title"></h3>
+                <p id="workout-instructions"></p>
+            </section>
 
-
+        </section>
         <section id="content3" class="content hidden">
             <h2>History</h2>
             <p>Content for your History world...</p>
+
             <ul id="history-list"></ul>
         </section>
-
-        <section id="content4" class="content hidden">
-            <h2>Timer</h2>
-            <p>Content for your Timer world...</p>
-            <section class="input-container">
-                <section id="difficulty-container">
-                    <label for="difficulty-select">Select Rest Difficulty Level:</label>
-                    <select id="difficulty-select">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>
-                </section>
-
-                <button id="start-workout-btn">Start</button>
-                <button id="stop-workout-btn">Stop</button>
-                <button id="reset-workout-btn">Reset</button>
-            </section>
-            <section id="timer-display">0:00</section>
-            <section id="exercise-instructions"></section>
+        <section id="content5" class="content hidden">
+            <h2>Favorite Exercises</h2>
+            <section id="favorites-container"></section>
         </section>
-
-        <section id="content5" class="content">
-            <h2>Profile</h2>
-            <p>Content for your Profile world...</p>
-            <p>Click on the below Names to be logged In😁</p>
-
-            <!-- Add profile buttons -->
-            <section class="profile-buttons">
-                <button id="profile-joel">Joel</button>
-                <button id="profile-paschal">Paschal</button>
-                <button id="profile-tanna">Tanna</button>
+        <section id="content6" class="content hidden">
+            <h2>Progress Tracking</h2>
+            <section id="progress-data">
+                <p>Workouts Completed: <span id="workouts-completed"></span></p>
+                <p>Total Duration: <span id="total-duration"></span></p>
+                <p>Estimated Total Calories Burned: <span id="total-calories-burned"></span> calories</p>
             </section>
-
-            <p>If the current Profile name is not to your liking, feel free to update it to your preferred choice</p>
-
-            <!-- Profile update form -->
-            <form id="profile-form">
-                <label for="new-profile-name">New Profile Name:</label>
-                <input type="text" id="new-profile-name" name="new-profile-name" required>
-                <button id="profile-update-button" type="submit">Update Profile</button>
-            </form>
         </section>
 
     </section>
 
+
     <template id="temp-portrait">
         <section class="workout-portrait">
-            <img src="logo.png" alt="Exercise Image">
             <section class="exercise-info">
                 <h2 class="workout-title">Workout title</h2>
-                <p class="workout-description"></p>
+                <section class="workout-dropdown">
+                    <span class="dropdown-toggle">Show Description</span>
+                    <section class="dropdown-content">
+                        <p class="workout-description"></p>
+                        <button class="close-dropdown">Close</button>
+                    </section>
+                </section>
                 <section class="duration-input">
-                    <label>Select Duration (mins):</label>
-                    <input type="number" name="duration" min="1" max="60" required class="workout-duration">
+                    <label>Input Duration (minutes):</label>
+                    <input type="number" name="duration" min="1" max="60" required class="workout-duration"
+                        placeholder="...type your duration here">
                 </section>
                 <p class="workout-category"></p>
                 <p class="workout-equipment"></p>
@@ -146,15 +168,6 @@
         </section>
     </template>
 
-    <template id="historyItemTemplate">
-        <li>
-            <span class="account-name"></span>
-            <br>
-            <span class="hiit-name"></span>
-            <ul class="exercises-list"></ul>
-            <button class="delete-button">Delete</button>
-        </li>
-    </template>
 
 </body>
 

@@ -5,5 +5,3 @@ node_modules/
 npm-debug.log
 .nodemon.json
 /logs
-*.sqlite3
-*.sqlite

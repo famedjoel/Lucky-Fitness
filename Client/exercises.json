@@ -3,45 +3,171 @@
       "ex-id": 1,
       "title": "SQUAT",
       "description": "Squats are dynamic, explosive movements involving lowering the body into a deep bend at the knees and hips, followed by a rapid return to the standing position, effectively incorporating cardiovascular and strength elements for an intense and efficient exercise.",
-      "image": "../Asset/squat.gif",
-      "category": "Category: Strength and Mobility",
+      "category": "Strength and Mobility",
       "equipment": "None",
-      "instructions": "Stand with your feet shoulder-width apart.\nLower your body as if you're sitting back into a chair, keeping your chest up and your back straight.\nLower until your thighs are parallel to the ground.\nPush through your heels to return to the starting position.\nRepeat for the desired number of repetitions."
+      "instruction": "1. Stand with your feet shoulder-width apart, toes pointing slightly outward. 2. Lower your body by bending your knees and pushing your hips back as if you are sitting in a chair. 3. Keep your chest up and your back straight. 4. Lower yourself until your thighs are parallel to the ground. 5. Push through your heels to return to the starting position. 6. Repeat for the desired number of repetitions.",
+      "met": 8
   },
   {
       "ex-id": 2,
       "title": "JUMPING SQUATS",
       "description": "Jumping squats add an explosive element to traditional squats by incorporating a jump at the top of the movement. This engages additional muscles and enhances the cardiovascular benefits of the exercise.",
-      "image": "../Asset/jumping-squats.gif",
       "category": "Strength and Mobility",
       "equipment": "None",
-      "instructions": "Begin with a regular squat.\nAs you come up, explode off the ground into a jump.\nLand softly and immediately go into the next squat.\nRepeat for the desired number of repetitions."
-  },
+      "instruction": "1. Stand with your feet shoulder-width apart, toes pointing slightly outward. 2. Lower your body by bending your knees and pushing your hips back as if you are sitting in a chair. 3. Keep your chest up and your back straight. 4. Lower yourself until your thighs are parallel to the ground. 5. Explode upward by jumping as high as you can. 6. Land softly and immediately lower yourself back into the squat position. 7. Repeat for the desired number of repetitions.",
+      "met": 6
+    },
   {
       "ex-id": 3,
       "title": "HIGH KNEES",
-      "description": "Sample description for high knees.",
-      "image": "path/to/high-knees-image.jpg",
+      "description": "High knees are a dynamic exercise that involves rapidly lifting the knees towards the chest while jogging in place. This exercise is great for improving cardiovascular fitness, leg strength, and coordination.",
       "category": "Cardio",
       "equipment": "None",
-      "instructions": "Stand with your feet hip-width apart.\nLift one knee as high as you can and quickly switch to lift the other knee.\nPump your arms in sync with your knee lifts.\nRepeat for the desired duration or number of repetitions."
+        "instruction": "1. Stand with your feet hip-width apart. 2. Begin jogging in place while lifting your knees as high as possible. 3. Pump your arms to increase the intensity of the exercise. 4. Continue for the desired duration or number of repetitions."
   },
   {
       "ex-id": 4,
       "title": "GLUTE BRIDGE",
-      "description": "Sample description for glute bridge.",
-      "image": "path/to/glute-bridge-image.jpg",
+      "description": "The glute bridge is a bodyweight exercise that targets the glutes, hamstrings, and lower back. It is a great exercise for improving hip stability, core strength, and lower body power.",
       "category": "Strength and Mobility",
       "equipment": "None",
-      "instructions": "Lie on your back with your knees bent and feet flat on the floor, hip-width apart.\nSqueeze your glutes and lift your hips towards the ceiling until your body forms a straight line from shoulders to knees.\nHold for a moment, then lower back down.\nRepeat for the desired number of repetitions."
+        "instruction": "1. Lie on your back with your knees bent and feet flat on the ground. 2. Engage your core and squeeze your glutes as you lift your hips off the ground. 3. Keep your body in a straight line from your shoulders to your knees. 4. Hold the bridge position for a few seconds before lowering your hips back to the ground. 5. Repeat for the desired number of repetitions."
   },
   {   
       "ex-id": 5,
       "title": "CROSSOVER LUNGE",
-      "description": "Sample description for crossover lunge.",
-      "image": "path/to/crossover-lunge-image.jpg",
+      "description": "The crossover lunge is a dynamic lower body exercise that targets the glutes, quads, and hamstrings. It is a great exercise for improving balance, coordination, and lower body strength.",
       "category": "Strength and Mobility",
       "equipment": "None",
-      "instructions": "Stand with your feet hip-width apart.\nTake a big step backward with your left foot, crossing it behind your right leg.\nLower your body into a lunge position.\nPush back up to the starting position and repeat on the other side.\nRepeat for the desired number of repetitions."
-  }
+        "instruction": "1. Stand with your feet hip-width apart. 2. Take a large step back and across your body with your right foot, lowering into a lunge position. 3. Keep your chest up and your back straight. 4. Push through your left heel to return to the starting position. 5. Repeat on the other side, stepping back and across with your left foot. 6. Continue alternating sides for the desired number of repetitions."
+  },
+  {
+        "ex-id": 6,
+        "title": "BURPEES",
+        "description": "Burpees are a full-body exercise that combines a squat, push-up, and jump into one fluid movement. This exercise is great for improving cardiovascular fitness, strength, and endurance.",
+        "category": "Cardio",
+        "equipment": "None",
+        "instruction": "1. Start in a standing position with your feet shoulder-width apart. 2. Lower yourself into a squat position and place your hands on the ground. 3. Jump your feet back into a push-up position. 4. Perform a push-up, keeping your body in a straight line from head to heels. 5. Jump your feet back to the squat position. 6. Explode upward into a jump, reaching your arms overhead. 7. Land softly and immediately lower yourself back into the squat position. 8. Repeat for the desired number of repetitions."
+
+    },
+    {
+        "ex-id": 7,
+        "title": "PLANK",
+        "description": "The plank is a static core exercise that involves holding a push-up position with the body in a straight line from head to heels. This exercise is great for improving core strength, stability, and endurance.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Start in a push-up position with your hands directly under your shoulders. 2. Engage your core and squeeze your glutes to keep your body in a straight line from head to heels. 3. Hold the plank position for the desired duration, making sure to keep your hips from sagging or piking. 4. Repeat for the desired number of sets."
+    },
+    {
+        "ex-id": 8,
+        "title": "MOUNTAIN CLIMBERS",
+        "description": "Mountain climbers are a dynamic exercise that involves alternating knee drives towards the chest while maintaining a push-up position. This exercise is great for improving cardiovascular fitness, core strength, and coordination.",
+        "category": "Cardio",
+        "equipment": "None",
+        "instruction": "1. Start in a push-up position with your hands directly under your shoulders. 2. Drive your right knee towards your chest, then quickly switch legs, driving your left knee towards your chest. 3. Continue alternating legs at a rapid pace, as if you are running in place. 4. Continue for the desired duration or number of repetitions."
+    },
+    {
+        "ex-id": 9,
+        "title": "SIDE PLANK",
+        "description": "The side plank is a static core exercise that involves holding a push-up position with the body on one side, supported by one arm and the side of the foot. This exercise is great for improving core strength, stability, and endurance.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Start in a push-up position with your hands directly under your shoulders. 2. Shift your weight to one side, supporting your body with one arm and the side of your foot. 3. Engage your core and squeeze your glutes to keep your body in a straight line from head to heels. 4. Hold the side plank position for the desired duration, making sure to keep your hips from sagging or piking. 5. Repeat on the other side."
+    },
+    {
+        "ex-id": 10,
+        "title": "SINGLE-LEG DEADLIFT",
+        "description": "The single-leg deadlift is a lower body exercise that targets the hamstrings, glutes, and lower back. It is a great exercise for improving balance, stability, and lower body strength.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Stand on one leg with a slight bend in the knee. 2. Hinge at the hips and lower your torso towards the ground while extending your free leg behind you. 3. Keep your back flat and your core engaged. 4. Return to the starting position by squeezing your glutes and pushing through your standing heel. 5. Repeat for the desired number of repetitions before switching legs."
+    },
+    {
+        "ex-id": 11,
+        "title": "PUSH-UPS",
+        "description": "Push-ups are a classic bodyweight exercise that targets the chest, shoulders, triceps, and core. They are great for building upper body strength and endurance.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Start in a push-up position with your hands directly under your shoulders. 2. Lower your body by bending your elbows and keeping your core engaged. 3. Keep your body in a straight line from head to heels. 4. Push through your palms to return to the starting position. 5. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 12,
+        "title": "LUNGES",
+        "description": "Lunges are a lower body exercise that targets the quads, hamstrings, and glutes. They are great for improving leg strength, balance, and stability.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Stand with your feet hip-width apart. 2. Take a large step forward with your right foot and lower your body until both knees are bent at a 90-degree angle. 3. Keep your chest up and your back straight. 4. Push through your right heel to return to the starting position. 5. Repeat on the other side, stepping forward with your left foot. 6. Continue alternating sides for the desired number of repetitions."
+    },
+    {
+        "ex-id": 13,
+        "title": "BICYCLE CRUNCHES",
+        "description": "Bicycle crunches are an abdominal exercise that targets the rectus abdominis and obliques. They are great for strengthening the core and improving abdominal definition.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Lie on your back with your hands behind your head and your legs lifted off the ground. 2. Bring your right elbow towards your left knee while extending your right leg. 3. Switch sides, bringing your left elbow towards your right knee while extending your left leg. 4. Continue alternating sides in a pedaling motion for the desired number of repetitions."
+    },
+    {
+        "ex-id": 14,
+        "title": "DUMBBELL CURLS",
+        "description": "Dumbbell curls are an isolation exercise that targets the biceps. They are great for building arm strength and improving bicep definition.",
+        "category": "Strength and Mobility",
+        "equipment": "Dumbbells",
+        "instruction": "1. Stand with your feet hip-width apart and a dumbbell in each hand. 2. Keep your elbows close to your sides and curl the dumbbells towards your shoulders. 3. Squeeze your biceps at the top of the movement before slowly lowering the dumbbells back to the starting position. 4. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 15,
+        "title": "TRICEP DIPS",
+        "description": "Tricep dips are a bodyweight exercise that targets the triceps. They are great for building arm strength and improving tricep definition.",
+        "category": "Strength and Mobility",
+        "equipment": "Parallel bars",
+        "instruction": "1. Stand between two parallel bars and grip them with your hands shoulder-width apart. 2. Lift yourself off the ground and extend your legs in front of you. 3. Lower your body by bending your elbows until your upper arms are parallel to the ground. 4. Push through your palms to return to the starting position. 5. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 16,
+        "title": "RUSSIAN TWISTS",
+        "description": "Russian twists are an abdominal exercise that targets the obliques. They are great for strengthening the core and improving rotational stability.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Sit on the ground with your knees bent and your feet lifted off the ground. 2. Lean back slightly and clasp your hands together in front of you. 3. Twist your torso to the right, bringing your hands towards the ground. 4. Twist your torso to the left, bringing your hands towards the ground. 5. Continue alternating sides for the desired number of repetitions."
+    },
+    {
+        "ex-id": 17,
+        "title": "SIT-UPS",
+        "description": "Sit-ups are a classic abdominal exercise that targets the rectus abdominis. They are great for strengthening the core and improving abdominal definition.",
+        "category": "Strength and Mobility",
+        "equipment": "None",
+        "instruction": "1. Lie on your back with your knees bent and your feet flat on the ground. 2. Place your hands behind your head or across your chest. 3. Engage your core and lift your upper body off the ground towards your knees. 4. Lower your body back to the starting position. 5. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 18,
+        "title": "SHOULDER PRESS",
+        "description": "Shoulder press is a compound exercise that targets the shoulders and triceps. It is great for building upper body strength and improving shoulder definition.",
+        "category": "Strength and Mobility",
+        "equipment": "Dumbbells or barbell",
+        "instruction": "1. Stand with your feet hip-width apart and a dumbbell in each hand. 2. Raise the dumbbells to shoulder height with your palms facing forward. 3. Press the dumbbells overhead until your arms are fully extended. 4. Slowly lower the dumbbells back to the starting position. 5. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 19,
+        "title": "LEG PRESS",
+        "description": "Leg press is a lower body exercise that targets the quads, hamstrings, and glutes. It is great for building leg strength and improving lower body power.",
+        "category": "Strength and Mobility",
+        "equipment": "Leg press machine",
+        "instruction": "1. Sit on the leg press machine with your back flat against the pad and your feet shoulder-width apart on the platform. 2. Push through your heels to extend your legs and lift the weight. 3. Slowly lower the weight back to the starting position. 4. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 20,
+        "title": "BENCH PRESS",
+        "description": "Bench press is a compound exercise that targets the chest, shoulders, and triceps. It is great for building upper body strength and improving chest definition.",
+        "category": "Strength and Mobility",
+        "equipment": "Barbell or dumbbells",
+        "instruction": "1. Lie on a flat bench with your feet flat on the ground and a barbell or dumbbells in your hands. 2. Lower the barbell to your chest, keeping your elbows close to your sides. 3. Press the barbell back up to the starting position. 4. Repeat for the desired number of repetitions."
+    },
+    {
+        "ex-id": 21,
+        "title": "DEADLIFT",
+        "description": "Deadlift is a compound exercise that targets the hamstrings, glutes, lower back, and traps. It is great for building overall strength and improving posterior chain power.",
+        "category": "Strength and Mobility",
+        "equipment": "Barbell or dumbbells",
+        "instruction": "1. Stand with your feet hip-width apart and a barbell or dumbbells in front of you. 2. Hinge at the hips and bend your knees to lower your torso towards the ground. 3. Grab the barbell or dumbbells with an overhand grip. 4. Keep your back flat and chest up as you lift the weight by extending your hips and knees. 5. Lower the weight back to the starting position. 6. Repeat for the desired number of repetitions."
+    }
 ]
