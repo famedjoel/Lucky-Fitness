@@ -15,7 +15,7 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
 
 2. Install dependencies:
     ```bash
-    npm install express
+    npm i 
     ```
 
 3. Start the application:
