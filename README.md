@@ -479,3 +479,6 @@ In this corrected version, createElement is replaced with document.createElement
 Make this change and the error should be resolved.
 
 
+---
+## Acknowledge
+ChatGPT OpenAI. (2024). GPT-4 Techncical Report. ArXiv:2303.08774[Cs].
