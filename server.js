@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url); // Get the filename of the cu
 const __dirname = dirname(__filename); // Get the directory name of the current module
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
