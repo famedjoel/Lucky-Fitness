@@ -28,33 +28,37 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 
 # Features
 
-1. History
-2. Vault
-3. Starting the Workout
-4. Adding the Workout
-5. Create the Name of your selected Workout
-6. Selecting the time of your choice
-7. Start,Reset,Stop the timer 
-8. Select the Instructions
+1. Customize HiiT Workout
+2. Favourite an exercise of choice
+3. search for an exercise
+4. Start a HiiT workout
+5. Record Keeping
+6. Visual cues
+7. Rest during an Exercise
+8. Progress Tracking
 
 # Description of the Features
 
-## History Feature
-The "History" feature allows users to keep track of their exercise routines over time. This page displays a list of recorded workout sessions, showing the names of the workouts and providing users with the ability to delete entries.
+## Customize HiiT Workout
+
+The "Customize HiiT Workout" in Lucky Fitness allows users to be able to create a workout consisting of exercises. 
 
 ### Key Components
 
-- **Display**: The workout history is presented in a clean and organized manner, making it easy for users to review their past fitness activities.
-
-- **Delete Functionality**: Each entry in the workout history includes a "Delete" button, enabling users to remove specific workouts they no longer wish to keep in their history.
-
+- ** Add Exercise **: the users can add any exercise through that button and it will display a message where it went the added exercise went to.
+- ** Type duration **: the user has to enter any duration of their choice and it will be in minutes
+- ** Enter HiiT Name: **: the users can be able to name their workout they added.
+- ** Rest Time (minutes) **: the users can decide to add any rest time they want to for their workouts for in between periods.
+- ** Your weight **: the users can insert their weight so they can know the estimated calories burnt during their HiiT workout.
 ### How it Works
 
-1. **Retrieval from Local Storage**: The app retrieves workout history data from the local storage, ensuring that users can access their previously recorded sessions even when they revisit the page or reload the app.
+As you enter the web application you can go to the exercise page and select any exercise of your choice and you can be able to scroll down and see a button that says "show more exercises" You can click it if you are not satisfied. after adding any exercise of your choice go to the customize HiiT page and input the title of the workout you are creating, the rest time of your choice for your exercise and also you can type in your weight.  after that, you can click the save HiiT button. and you have created a HIIT workout
 
-2. **Dynamic Rendering**: The workout history list is dynamically rendered on the page, allowing for seamless updates whenever a new workout is added or an existing one is deleted.
+### Design 
 
-3. **User Interaction**: Users can interact with the "Delete" button next to each workout entry to remove specific workouts from their history.
+I had a clear vision from the beginning, which made the process manageable. I sketched out the initial design on Figma before starting the implementation. I decided to use portrait size for the exercise interface, differing from the common small box format used in most apps, to give it a unique aspect.
+Additionally, I incorporated a rest time feature. Recognizing that every user appreciates breaks during workouts, this seemed like a natural fit to enhance user experience by allowing intervals of rest.
+For the weight input feature, I thought it essential for a fitness app to track weight changes, considering that consistent exercise can lead to weight loss. This feature not only aids in tracking health metrics but also motivates users by showing the tangible results of their fitness journey.
 
 ## Vault Feature
 
