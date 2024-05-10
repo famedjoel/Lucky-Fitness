@@ -36,10 +36,11 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 6. Visual cues
 7. Progress Tracking
 8. Clear Workout
+9. Editing WorkOut Name & Duration
 
 # Description of the Features
 
-## Customize HiiT Workout
+## Customize HiiT Workout Feature
 
 The "Customize HiiT Workout" in Lucky Fitness allows users to be able to create a workout consisting of exercises. 
 
@@ -61,7 +62,7 @@ I had a clear vision from the beginning, which made the process manageable. I sk
 Additionally, I incorporated a rest time feature. Recognizing that every user appreciates breaks during workouts, this seemed like a natural fit to enhance user experience by allowing intervals of rest.
 For the weight input feature, I thought it essential for a fitness app to track weight changes, considering that consistent exercise can lead to weight loss. This feature not only aids in tracking health metrics but also motivates users by showing the tangible results of their fitness journey.
 
-## Favourite an exercise of choice
+## Favourite an exercise of choice Feature
 
 The "Favourite an exercise of choice" feature in Lucky Fitness allows users to bookmark the exercise they like the more and they can see them in the favorites page.
 
@@ -77,7 +78,7 @@ so basically while they are creating their personalized HiiT they can decide to 
 
 I believe that integrating these features will enhance the app's appeal and interactivity for users.
 
-## search for an exercise
+## search for an exercise Feature
 
 The "search for an exercise" feature in Lucky Fitness allows users to search for any exercise while creating their HiiT.
 
@@ -89,7 +90,7 @@ Simply enter any exercise into the search bar to find available sessions at any 
 
 I decided to integrate this feature because some users may have difficulty scrolling, so typing to create your own HIIT session offers a more accessible alternative.
 
-##  Start a HiiT workout
+##  Start a HiiT workout Feature
 
 The " Start a HiiT workout" feature in Lucky Fitness allows users to start the workout they created.
 
@@ -107,7 +108,7 @@ It's quite straightforward: after creating your HIIT session, simply click 'Save
 ### Design
 For every workout created, users can easily start their session with the click of a button. I've also implemented detailed instructions for each exercise to guide them effectively. Additionally, to help users stay focused and informed, the app displays real-time updates on current activities and what’s coming up next.
 
-## Record Keeping 
+## Record Keeping Feature
 
 The "record-keeping" basically a history page where users  keep track of their exercise workouts over time. This page displays a list of recorded workout sessions, showing the names of the workouts and providing users with the ability to delete entries and also redo that specific workout.
 
@@ -126,7 +127,7 @@ Once you create your workout, refreshing the page will display your most recent 
 I implemented this feature because users may sometimes forget their past activities, so having a visible record of previous workouts helps them track their progress and maintain consistency.
 
 
-## Visual cues
+## Visual cues Feature
 
 The "Visual cues" feature in Lucky Fitness allows users to access/see the app in a different way of their choice.
 
@@ -145,7 +146,7 @@ For light and dark mode, users can simply click on the sun or star icon to toggl
 
 While designing the app, I realized that light and dark modes are standard features on mobile phones, so I decided to incorporate them, recognizing their potential benefits for users. Additionally, the idea of offering different color themes stemmed from a discussion with friends. Realizing its appeal, I decided to seriously pursue and implement this feature to enhance the user experience.
 
-## Progress Tracking
+## Progress Tracking Feature
 
 The "Progress Tracking" feature in Lucky Fitness allows users to view their progress during the entire workouts they did while using the app.
 
@@ -164,7 +165,7 @@ The process is streamlined for ease of use: simply create your HIIT session, sta
 
 While designing the app, I recognized the importance of users being able to easily track their progress without confusion. This led me to conduct research and explore innovative features. Consequently, I decided to incorporate a weight-tracking functionality, considering the primary goal of this HIIT app is to help users burn fat and lose weight effectively.
 
-## Clear Workout
+## Clear Workout Feature
 
 The "Clear Workout" feature in Lucky Fitness allows users to clear their current workout if they don't fancy it and create a new one.
 ### Key Components
@@ -179,6 +180,27 @@ It's easy to use: simply return to the "Customize HIIT" page and click "Clear Wo
 
 
 While designing the app, I acknowledged the varied preferences and moods of users, which can change frequently. To accommodate this, I added a feature allowing users to easily switch out exercises they find mundane for more engaging and challenging options. This flexibility enhances the user experience by catering to individual needs and keeping the workouts interesting.
+
+
+## Editing WorkOut Name & Duration Feature
+
+The "Editing WorkOut Name & Duration" feature in lucky fitness allows user to edit the created workout name they inputed at first and acan also edit the duration to their tatse again.
+
+### Key Components
+
+- **Edit button**: users can edit the duration by clciking this button
+
+- **Save Changes button**: users can confirm the changes they made by clciking this button
+
+### How it Works
+
+After you create your HIIT session and click 'Save HIIT,' you'll be directed to the 'Saved HIIT' page. Here, you'll see an input bar displaying the initial name you assigned, along with the exercise and its duration. To edit the duration, simply click 'Edit.' If you wish to modify the exercise details, erase the current input and type the new information. Once you're done with the changes, click the 'Save Changes' button. Your updates will be reflected both in the timer and in your workout history. Now, you can relax and start your updated HIIT session with confidence.
+
+### Design
+
+
+Initially, I recognized that user preferences can change frequently; for example, someone might decide to shorten a workout from 5 minutes to 2 minutes if they're in a hurry. This insight led me to implement a feature that allows users to easily adjust the duration and details of their workouts. This flexibility is crucial because it acknowledges that one person's needs can vary over time, making it a key feature of the app.
+
 
 ---
 
