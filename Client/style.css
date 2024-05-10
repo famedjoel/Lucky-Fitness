@@ -502,6 +502,10 @@ h1 {
   color: white;
 }
 
+.dark-mode #workout-title {
+  color: white;
+}
+
 /* Saved HiiT styles */
 #content4 {
   text-align: center;
@@ -1124,12 +1128,25 @@ h1 {
 /* Styling for the #activity-info */
 #activity-info {
   background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+#activity-info span {
+  font-size: 16px;
+  margin-right: 20px; /* Increased margin-right for more spacing */
+}
+
+#current-activity {
+  color:  #28a745;
+  font-weight: bold;
+  margin-right: 40px; /* Added margin-right for even more spacing */
+}
+
+#next-activity {
+  color: #007bff;
+  font-weight: bold;
 }
