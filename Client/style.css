@@ -82,6 +82,7 @@ h1 {
 
 /* Media Query for small screens */
 @media only screen and (max-width: 600px) {
+
   /* Adjust the button container for small screens */
   .button-container {
     flex-wrap: wrap;
@@ -96,7 +97,7 @@ h1 {
 
 /* Style the exercise box within #content1 */
 #content1 {
-   text-align: center;
+  text-align: center;
 }
 
 /* Style section 2 paragraph */
@@ -147,11 +148,11 @@ h1 {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  width: 300px; 
-  top: calc(100% + 10px); 
-  left: 50%; 
-  transform: translateX(-50%); 
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 300px;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
   border-radius: 5px;
@@ -265,6 +266,7 @@ h1 {
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
+
   /* Adjust the workout portrait width for smaller screens */
   .workout-portrait {
     width: calc(80% - 20px);
@@ -429,7 +431,7 @@ h1 {
 }
 
 /* Dark Mode styles for workout title */
-.dark-mode #workout-title{
+.dark-mode #workout-title {
   color: black
 }
 
@@ -788,6 +790,7 @@ h1 {
 
 /* Media query for screen width greater than or equal to 768px */
 @media screen and (min-width: 768px) {
+
   /* Styling for the input elements inside #activity-builder */
   #activity-builder input {
     width: 300px;
@@ -1012,6 +1015,7 @@ h1 {
 
 /* Media query for screen width less than or equal to 600px */
 @media screen and (max-width: 600px) {
+
   /* Styling for the p elements inside #progress-data */
   #progress-data p {
     flex-basis: 100%;
@@ -1022,7 +1026,7 @@ h1 {
 .navbar {
   display: flex;
   justify-content: center;
-  background-color: #333; 
+  background-color: #333;
   padding: 10px 0;
 }
 
@@ -1036,7 +1040,7 @@ h1 {
   text-decoration: none;
   font-size: 16px;
   margin: 0 10px;
-  transition: background-color 0.3s, transform 0.3s; 
+  transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -1044,7 +1048,7 @@ h1 {
 /* Styling for the nav buttons on hover */
 .nav-button:hover {
   background-color: white;
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 /* Styling for the active nav button */
@@ -1139,15 +1143,18 @@ h1 {
   display: flex;
   align-items: center;
 }
+
 #activity-info span {
   font-size: 16px;
-  margin-right: 20px; /* Increased margin-right for more spacing */
+  margin-right: 20px;
+  /* Increased margin-right for more spacing */
 }
 
 #current-activity {
-  color:  #28a745;
+  color: #28a745;
   font-weight: bold;
-  margin-right: 40px; /* Added margin-right for even more spacing */
+  margin-right: 40px;
+  /* Added margin-right for even more spacing */
 }
 
 #next-activity {

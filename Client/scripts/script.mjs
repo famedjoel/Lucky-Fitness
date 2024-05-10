@@ -117,6 +117,7 @@ function handleContentClick(event) {
   }
 }
 
+
 // Add event listener for buttons with data-target attributes
 buttons.forEach(button => {
   button.addEventListener('click', handleContentClick);
