@@ -65,7 +65,7 @@ export function redoWorkout(activity) {
 
   // Navigate to the HIIT Station page
   showContent('content4');
-  history.pushState(null, null, '/hiit-station');
+  history.pushState(null, null, '/saved-hiit');
 
   // Remove the 'active' class from all buttons
   const buttons = document.querySelectorAll('.button-container button');

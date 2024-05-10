@@ -66,7 +66,7 @@ function handleContentClick(event) {
       friendlyName = 'history';
       break;
     case 'content4':
-      friendlyName = 'hiit-station';
+      friendlyName = 'Saved-Hiit';
       break;
     case 'content5':
       friendlyName = 'favorites';
@@ -122,7 +122,7 @@ function handleInitialURL() {
     case 'customize-hiit':
       target = 'content2';
       break;
-    case 'hiit-station':
+    case 'saved-hiit':
       target = 'content4';
       break;
     case 'history':
@@ -166,7 +166,7 @@ window.addEventListener('popstate', function () {
     case '/customize-hiit':
       target = 'content2';
       break;
-    case '/hiit-station':
+    case '/saved-hitt':
       target = 'content4';
       break;
     case '/history':
@@ -233,7 +233,7 @@ function addEventListener() {
 
     // saveActivity();
     showContent('content4');
-    history.pushState(null, null, '/hiit-station');
+    history.pushState(null, null, '/saved-hiit');
 
     // Remove the 'active' class from all buttons
     const buttons = document.querySelectorAll('.button-container button');
