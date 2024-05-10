@@ -30,7 +30,7 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 
 1. Customize HiiT Workout
 2. Favourite an exercise of choice
-3. search for an exercise
+3. Search for an exercise
 4. Start a HiiT workout
 5. Record Keeping
 6. Visual cues
@@ -78,7 +78,7 @@ so basically while they are creating their personalized HiiT they can decide to 
 
 I believe that integrating these features will enhance the app's appeal and interactivity for users.
 
-## search for an exercise Feature
+## Search for an exercise Feature
 
 The "search for an exercise" feature in Lucky Fitness allows users to search for any exercise while creating their HiiT.
 
