@@ -45,11 +45,12 @@ The "Customize HiiT Workout" in Lucky Fitness allows users to be able to create 
 
 ### Key Components
 
-- ** Add Exercise **: the users can add any exercise through that button and it will display a message where it went the added exercise went to.
-- ** Type duration **: the user has to enter any duration of their choice and it will be in minutes
-- ** Enter HiiT Name: **: the users can be able to name their workout they added.
-- ** Rest Time (minutes) **: the users can decide to add any rest time they want to for their workouts for in between periods.
-- ** Your weight **: the users can insert their weight so they can know the estimated calories burnt during their HiiT workout.
+- **Add Exercise**: the users can add any exercise through that button and it will display a message where it went the added exercise went to.
+- **Type duration**: the user has to enter any duration of their choice and it will be in minutes
+- **Enter HiiT Name:**: the users can be able to name their workout they added.
+- **Rest Time (minutes)**: the users can decide to add any rest time they want to for their workouts for in between periods.
+- **Your weight**: the users can insert their weight so they can know the estimated calories burnt during their HiiT workout.
+
 ### How it Works
 
 As you enter the web application you can go to the exercise page and select any exercise of your choice and you can be able to scroll down and see a button that says "show more exercises" You can click it if you are not satisfied. after adding any exercise of your choice go to the customize HiiT page and input the title of the workout you are creating, the rest time of your choice for your exercise and also you can type in your weight.  after that, you can click the save HiiT button. and you have created a HIIT workout
@@ -60,71 +61,51 @@ I had a clear vision from the beginning, which made the process manageable. I sk
 Additionally, I incorporated a rest time feature. Recognizing that every user appreciates breaks during workouts, this seemed like a natural fit to enhance user experience by allowing intervals of rest.
 For the weight input feature, I thought it essential for a fitness app to track weight changes, considering that consistent exercise can lead to weight loss. This feature not only aids in tracking health metrics but also motivates users by showing the tangible results of their fitness journey.
 
-## Vault Feature
+## Favourite an exercise of choice
 
-The "Vault" feature in Lucky Fitness allows users to manage and customize their exercise routines by adding specific exercises to their personal vault. Users can also create personalized HIIT (High-Intensity Interval Training) workouts by selecting exercises from their vault. Additionally, users have the option to start their workouts directly from this feature.
-
-### Key Components
-
-- **Display**: The added exercises are presented in a clean and organized manner, providing essential details such as exercise title, description, duration, category, and required equipment.
-
-- **Interaction**: Users can click on individual exercises to select them for their personalized workouts.
-
-- **Create Workout**: The feature allows users to create a customized workout by providing a workout name.
-
-- **Start Workout**: Users can initiate their workouts directly from the "Vault" feature.
-
-### How it Works
-
-1. **View Added Exercises**: The app retrieves added exercises from the local storage and dynamically displays them in workout boxes.
-
-2. **Create Workout Box**: Each exercise is represented as a workout box, showing key details like title, description, duration, category, and required equipment.
-
-3. **User Interaction**: Users can click on a workout box to select an exercise for their personalized workout.
-
-4. **Create Workout**: The "Create HIIT" button allows users to input a workout name, adding a personal touch to their fitness routines.
-
-5. **Start Workout**: The "Start Workout" button initiates the workout, redirecting users to the main timer page.
-
-## Starting the Workout Feature
-
-The "Starting the Workout" feature in Lucky Fitness allows users to initiate their exercise routines using a flexible and customizable timer. Users have the option to start individual exercises with specific durations or commence a general workout directly from the "Vault" page.
+The "Favourite an exercise of choice" feature in Lucky Fitness allows users to bookmark the exercise they like the more and they can see them in the favorites page.
 
 ### Key Components
 
-- **Individual Exercise Start**: Users can start each exercise individually with customized durations.
-
-- **General Workout Start**: Users have the option to start a general workout directly from the "Vault" page, where a pre-defined sequence of exercises will be executed.
-
-- **Timer Display**: The app provides a clear and user-friendly timer display during workouts.
+- the user can see a favorite button in a star format
 
 ### How it Works
 
-1. **Individual Exercise Start**: Users can click on a specific exercise in the "Vault" feature to start it individually. The timer will run for the specified duration of that exercise.
+so basically while they are creating their personalized HiiT they can decide to favorite exercise. so it is in any exercise portrait clicking it will do the job and you can view it from your favorite page.
 
-2. **General Workout Start**: Users can click the "Start Workout" button on the "Vault" page to initiate a general workout. The app will guide users through a pre-defined sequence of exercises, displaying the timer for each.
+### Design
 
-3. **Timer Display**: During both individual and general workout sessions, a timer is prominently displayed, allowing users to track their progress.
+I believe that integrating these features will enhance the app's appeal and interactivity for users.
 
-## Selecting the Time of Your Choice Feature
+## search for an exercise
 
-The "Selecting the Time of Your Choice" feature in Lucky Fitness allows users to customize their workout durations using a flexible time input. Users can set the duration for individual exercises or workout sessions, providing a tailored experience based on their preferences.
+The "search for an exercise" feature in Lucky Fitness allows users to search for any exercise while creating their HiiT.
+
+### How it Works
+
+Simply enter any exercise into the search bar to find available sessions at any time.
+
+### design 
+
+I decided to integrate this feature because some users may have difficulty scrolling, so typing to create your own HIIT session offers a more accessible alternative.
+
+##  Start a HiiT workout
+
+The " Start a HiiT workout" feature in Lucky Fitness allows users to start the workout they created.
 
 ### Key Components
 
-- **Time Input**: Users can input their desired workout duration in the format HH:MM:SS.
+- **Start Button**: The user can start their workout from the get-go.
 
-- **Validation**: The app validates user input to ensure it follows the correct time format (HH:MM:SS).
-
-- **Start Button**: Initiates the timer based on the user's selected time.
+- **Stop Button**: The user can stop/pause the workout they started.
+- **Continue Button**: The user can continue/play the workout the stopped
 
 ### How it Works
 
-1. **Time Input**: Users enter the desired workout duration in the input field provided.
+It's quite straightforward: after creating your HIIT session, simply click 'Save HIIT.' This action will redirect you to the 'Saved-HIIT' page. From there, click 'Start' and you're ready to begin your workout.
 
-2. **Validation**: The app checks the input for correct time format compliance (HH:MM:SS).
-
-3. **Start Button**: Clicking the "Start" button initiates the timer for the specified duration.
+### Design
+For every workout created, users can easily start their session with the click of a button. I've also implemented detailed instructions for each exercise to guide them effectively. Additionally, to help users stay focused and informed, the app displays real-time updates on current activities and what’s coming up next.
 
 ### Navigation
 
