@@ -195,4 +195,79 @@ Another significant enhancement is the introduction of a 'favorite' function, ak
 
 Overall, these improvements have transformed the app into a more efficient, engaging, and user-friendly platform, ensuring that it not only meets but exceeds user expectations.
 
-later i plan to reference the gifs and talk where i got the idea
+---
+
+## AI
+
+### Prompts to develop my Visual Cue on my timer
+
+> I want to implement a visual cue for my timer in the sense that when on a current timer it is green and when on rest it is blue
+        To implement a visual cue for your timer, indicating green when on the current timer and blue when on rest, you can modify the CSS and JavaScript code. Here's how you can achieve this:
+
+Update the CSS:
+Add the following CSS classes to your existing CSS code:
+
+cssCopy code.timer.current {
+  background-color: green;
+}
+
+.timer.rest {
+  background-color: blue;
+}
+These classes will be dynamically added to the timer element to change its background color based on the current state.
+
+Update the JavaScript:
+In the timer.js file, modify the displayTimer function to add the appropriate class to the timer element based on the current state. Here's an updated version of the displayTimer function:
+
+javascriptCopy codeexport function displayTimer(duration, element, callback, startSeconds = 0, isCurrent = true) {
+  let minutes = duration;
+  let seconds = startSeconds;
+
+  element.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+  // Add the appropriate class to the timer element based on the current state
+  if (isCurrent) {
+    element.classList.add('current');
+    element.classList.remove('rest');
+  } else {
+    element.classList.add('rest');
+    element.classList.remove('current');
+  }
+
+  let totalSeconds = minutes * 60 + seconds;
+
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    minutes = Math.floor(totalSeconds / 60);
+    seconds = totalSeconds % 60;
+
+    element.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+    if (--totalSeconds < 0) {
+      clearInterval(timerInterval);
+      callback();
+    }
+  }, 1000);
+}
+In the updated displayTimer function, we added an additional parameter isCurrent to indicate whether the timer is currently active or on rest. Based on this parameter, we add the appropriate class to the timer element using element.classList.add() and element.classList.remove().
+
+Update the nextExercise and resumeExercise functions:
+In the nextExercise and resumeExercise functions, pass the appropriate value for the isCurrent parameter when calling the displayTimer function. For example:
+
+javascriptCopy codedisplayTimer(exerciseDuration, timerContainer, () => {
+  currentExerciseIndex++;
+  updateProgress(exerciseDuration * 60);
+  if (currentExerciseIndex < activity.exercises.length) {
+    workoutTitleContainer.textContent = 'Rest Time';
+    workoutInstructionsContainer.innerHTML = `<p>Take a ${restDuration} minute rest before the next exercise.</p>`;
+    displayTimer(restDuration, timerContainer, nextExercise, 0, false); // Pass false for isCurrent during rest time
+  } else {
+    // ...
+  }
+}, 0, true); // Pass true for isCurrent during exercise time
+Similarly, update the resumeExercise function to pass the appropriate value for isCurrent when calling displayTimer.
+With these changes, the timer element will have a green background color when displaying the current exercise timer and a blue background color when displaying the rest timer.
+Remember to adjust the colors and styles in the CSS classes according to your preference.
+
+    
+> Prompt
