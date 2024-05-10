@@ -1,5 +1,4 @@
-// Hiit.js
-
+// hiit.js
 import { displayFavorites, toggleFavorite } from './favorite.js';
 
 export let instructionsData = [];
@@ -69,7 +68,7 @@ export function createWorkoutPortrait(workoutData, isFavorite = false) {
   // Add exercise button event listener
   const addExerciseButton = portrait.querySelector('.workout-add');
   addExerciseButton.addEventListener('click', function () {
-    const durationInput = document.querySelector('.workout-duration');
+    const durationInput = portrait.querySelector('.workout-duration');
     const duration = durationInput.value.trim();
     if (duration === '') {
       // Display error message if duration is not entered

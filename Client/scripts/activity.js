@@ -72,7 +72,7 @@ export function displayActivity(activity) {
   activityContainer.appendChild(exercisesList);
 
   // Create and display the timer container
-  const timerContainer = document.createElement('div');
+  const timerContainer = document.createElement('section');
   timerContainer.classList.add('timer');
   activityContainer.appendChild(timerContainer);
 

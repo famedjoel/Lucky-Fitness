@@ -1,5 +1,4 @@
 body {
-    /* background-color: #ff99cc; */
     background: radial-gradient(circle, #ffffff, #f9f9f9);
     margin: 0;
     padding: 0;
@@ -8,6 +7,9 @@ body {
     font-style: normal;
 }
 
+.content.hidden {
+  display: none;
+}
 
 h1 {
     text-align: center;
@@ -15,10 +17,9 @@ h1 {
     color: #333;
     font-size: 2em;
     margin: 20px 0 0;
-    /* Added margin to the top */
 }
 
-#settings-icon {
+#mode-icon {
     cursor: pointer;
     position: fixed;
     top: 0;
@@ -26,35 +27,21 @@ h1 {
     padding: 10px;
 }
 
-#settings-icon img {
+#mode-icon img {
     width: 40px;
     height: 40px;
 }
 
-#settings-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 10px;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    cursor: pointer;
-}
 
 .section2 {
     background: radial-gradient(circle, #4a4a4a, #f9f9f9);
-    /* Set background color for section 2 */
     padding: 20px;
-    /* Add padding for content */
     margin-top: 0px;
-    /* Adjust margin to move the section up */
 }
 
 
 .section2 h2 {
     text-align: center;
-    /* Center-align the heading */
 }
 
 .button-container {
@@ -96,9 +83,6 @@ h1 {
         margin: 5px;
     }
 }
-.content.hidden {
-    display: none;
-}
 
 
 /* Exercise box styles within #content1 */
@@ -112,7 +96,6 @@ h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
-    /* Adjust the color as needed */
 }
 
 /* Style for each portrait box */
@@ -128,7 +111,6 @@ h1 {
 }
 
 .workout-portrait:hover {
-    /* transform: scale(1.05); */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -273,23 +255,13 @@ h1 {
     color: #007bff;
 }
 
-#welcome-message {
-    font-size: 20px;
-    color: #333;
-}
-
+/* Dark Mode */
 .dark-mode {
-    /* Define dark mode styles */
     background: radial-gradient(circle, #000000, #333333);
     color: #fff;
 }
 
 .dark-mode h1 {
-    color: #fff;
-}
-
-.dark-mode #settings-content {
-    background-color: #333;
     color: #fff;
 }
 
@@ -312,6 +284,7 @@ h1 {
 
 .dark-mode #exercises-list li span {
     color: black;
+    font-weight: bold;
 }
 
 .dark-mode #exercises-list li p {
@@ -464,12 +437,9 @@ h1 {
 }
 
 
-/* Add other dark mode styles as needed */
-
-/* Hiit Station styles */
+/* Saved HiiT styles */
 #content4 {
     text-align: center;
-    /* padding: 20px; */
   }
   
   #content4 h2 {
@@ -560,31 +530,6 @@ h1 {
     margin-bottom: 20px;
   }
   
-  .timer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #ff4d4d, #ff8c00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    z-index: -1;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
   #activity-container .timer-buttons {
     margin-top: 10px;
   }
@@ -652,7 +597,7 @@ h1 {
   #activity-container .timer-buttons button:last-child {
     margin-right: 0;
   }
-  
+
   #activity-info {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
@@ -665,22 +610,22 @@ h1 {
   
   #activity-info span {
     font-size: 16px;
-    margin-right: 20px; /* Increased margin-right for more spacing */
+    margin-right: 20px; 
   }
   
   #current-activity {
-    color: #007bff;
+    color:   #28a745;
     font-weight: bold;
-    margin-right: 40px; /* Added margin-right for even more spacing */
+    margin-right: 40px; 
   }
-  
+
   #next-activity {
-    color: #28a745;
+    color: #007bff;
     font-weight: bold;
   }
   
   #workout-info {
-    margin-top: 10px; /* Reduce the margin-top */
+    margin-top: 10px; 
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -690,7 +635,7 @@ h1 {
   
   #workout-info h3 {
     font-size: 20px;
-    margin-bottom: 5px; /* Reduce the margin-bottom */
+    margin-bottom: 5px; 
   }
   
   #workout-info p {
@@ -723,7 +668,7 @@ h1 {
   
   #exercises-list li span {
     margin-left: 5px;
-    color: #888;
+    color: black;
   }
   
   #exercises-list li .workout-duration {
@@ -979,11 +924,11 @@ h1 {
 .navbar {
   display: flex;
   justify-content: center;
-  background-color: #333; /* Dark background for the navbar */
+  background-color: #333; 
   padding: 10px 0;
 }
 
-/* Styling each button in the navbar */
+
 .nav-button {
   background-color: white;
   color: black;
@@ -993,24 +938,24 @@ h1 {
   text-decoration: none;
   font-size: 16px;
   margin: 0 10px;
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  transition: background-color 0.3s, transform 0.3s; 
   cursor: pointer;
   border-radius: 5px;
 }
 
-/* Hover effect for buttons */
+
 .nav-button:hover {
   background-color: white;
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  transform: scale(1.1); 
 }
 
-/* Optional: add active class in JS or server-side rendering */
+
 .nav-button.active {
   background-color: grey;
   color: white;
 }
 
-/* Add these styles to your CSS file */
+
 .modal {
   display: none;
   position: fixed;
