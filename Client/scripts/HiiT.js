@@ -1,7 +1,10 @@
+// Hiit.js
+
 import { displayFavorites, toggleFavorite } from './favorite.js';
 
 export let instructionsData = [];
 
+// Fetch exercises data from exercises.json
 export async function fetchExercises() {
   try {
     const response = await fetch('/exercises.json');
@@ -13,6 +16,7 @@ export async function fetchExercises() {
   }
 }
 
+// Fetch exercises data and display instructions
 export async function fetchAndDisplayInstructions() {
   try {
     instructionsData = await fetchExercises();
@@ -24,11 +28,13 @@ export async function fetchAndDisplayInstructions() {
   }
 }
 
+// Create a workout portrait based on workout data
 export function createWorkoutPortrait(workoutData, isFavorite = false) {
   const portraitContainer = workoutData['ex-id'] <= 6 ? document.querySelector('#content1-portrait-container') : document.querySelector('#hidden-exercises');
   const portraitTemplate = document.querySelector('#temp-portrait');
   const portrait = portraitTemplate.content.cloneNode(true).firstElementChild;
 
+  // Set title, description, category, and equipment
   const title = portrait.querySelector('.workout-title');
   title.textContent = workoutData.title;
 
@@ -41,29 +47,32 @@ export function createWorkoutPortrait(workoutData, isFavorite = false) {
   const equipment = portrait.querySelector('.workout-equipment');
   equipment.textContent = workoutData.equipment;
 
-  const durationInput = portrait.querySelector('.workout-duration');
-
+  // Set up description dropdown
   const descriptionDropdown = portrait.querySelector('.workout-dropdown');
   const dropdownToggle = descriptionDropdown.querySelector('.dropdown-toggle');
   const dropdownContent = descriptionDropdown.querySelector('.dropdown-content');
   dropdownContent.innerHTML = `<p>${workoutData.description}</p><button class="close-dropdown">X</button>`;
 
+  // Close dropdown button event listener
   const closeDropdownBtn = dropdownContent.querySelector('.close-dropdown');
   closeDropdownBtn.addEventListener('click', function () {
     dropdownContent.style.display = 'none';
   });
 
+  // Toggle dropdown visibility
   dropdownToggle.addEventListener('click', function () {
     dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
   });
 
   portrait.dataset.exerciseId = workoutData['ex-id'];
 
+  // Add exercise button event listener
   const addExerciseButton = portrait.querySelector('.workout-add');
   addExerciseButton.addEventListener('click', function () {
-    // const exerciseName = workoutData.title;
+    const durationInput = document.querySelector('.workout-duration');
     const duration = durationInput.value.trim();
     if (duration === '') {
+      // Display error message if duration is not entered
       const message = document.createElement('section');
       message.textContent = `Please enter a duration for ${workoutData.title}`;
       message.classList.add('message');
@@ -72,6 +81,7 @@ export function createWorkoutPortrait(workoutData, isFavorite = false) {
         message.remove();
       }, 3000);
     } else {
+      // Add exercise to Customize Hiit Page
       const clonedPortrait = portrait.cloneNode(true);
       const createHiitSection = document.querySelector('#content2');
       const inputField = clonedPortrait.querySelector('.workout-duration');
@@ -90,6 +100,7 @@ export function createWorkoutPortrait(workoutData, isFavorite = false) {
     }
   });
 
+  // Add favorite button
   const favoriteButton = document.createElement('button');
   favoriteButton.classList.add('favorite-btn');
   if (isFavorite) {
@@ -109,7 +120,7 @@ export function createWorkoutPortrait(workoutData, isFavorite = false) {
   return portrait;
 }
 
-
+// Display all exercises
 export async function displayExercises() {
   try {
     const exercisesData = await fetchExercises();
@@ -123,7 +134,7 @@ export async function displayExercises() {
   }
 }
 
-
+// Toggle visibility of hidden exercises
 export function toggleHiddenExercises() {
   const hiddenContainer = document.querySelector('#hidden-exercises');
   const showMoreButton = document.querySelector('#show-more-btn');
@@ -136,7 +147,7 @@ export function toggleHiddenExercises() {
   }
 }
 
-
+// Search exercises based on input
 export function searchExercises() {
   const searchInput = document.querySelector('#searchInput').value.toLowerCase();
   const portraitContainers = document.querySelectorAll('#content1-portrait-container, #hidden-exercises');
@@ -168,4 +179,5 @@ export function searchExercises() {
   }
 }
 
+// Fetch and display instructions on page load
 fetchAndDisplayInstructions();

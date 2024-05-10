@@ -23,16 +23,18 @@
       "description": "High knees are a dynamic exercise that involves rapidly lifting the knees towards the chest while jogging in place. This exercise is great for improving cardiovascular fitness, leg strength, and coordination.",
       "category": "Cardio",
       "equipment": "None",
-        "instruction": "1. Stand with your feet hip-width apart. 2. Begin jogging in place while lifting your knees as high as possible. 3. Pump your arms to increase the intensity of the exercise. 4. Continue for the desired duration or number of repetitions."
-  },
+        "instruction": "1. Stand with your feet hip-width apart. 2. Begin jogging in place while lifting your knees as high as possible. 3. Pump your arms to increase the intensity of the exercise. 4. Continue for the desired duration or number of repetitions.",
+        "met": 8  
+    },
   {
       "ex-id": 4,
       "title": "GLUTE BRIDGE",
       "description": "The glute bridge is a bodyweight exercise that targets the glutes, hamstrings, and lower back. It is a great exercise for improving hip stability, core strength, and lower body power.",
       "category": "Strength and Mobility",
       "equipment": "None",
-        "instruction": "1. Lie on your back with your knees bent and feet flat on the ground. 2. Engage your core and squeeze your glutes as you lift your hips off the ground. 3. Keep your body in a straight line from your shoulders to your knees. 4. Hold the bridge position for a few seconds before lowering your hips back to the ground. 5. Repeat for the desired number of repetitions."
-  },
+        "instruction": "1. Lie on your back with your knees bent and feet flat on the ground. 2. Engage your core and squeeze your glutes as you lift your hips off the ground. 3. Keep your body in a straight line from your shoulders to your knees. 4. Hold the bridge position for a few seconds before lowering your hips back to the ground. 5. Repeat for the desired number of repetitions.",
+        "met": 3
+    },
   {   
       "ex-id": 5,
       "title": "CROSSOVER LUNGE",

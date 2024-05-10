@@ -1,17 +1,26 @@
 import { getActivitiesFromLocalStorage } from './storage.js';
-import { instructionsData } from './HiiT.js';
+import { instructionsData } from './hiit.js';
 import { updateProgress } from './progress.js';
 
 let timerInterval;
 let timeLeft = 0;
 let currentExerciseIndex = 0;
 
-
-export function displayTimer(duration, element, callback, startSeconds = 0) {
+// Function to display the timer
+export function displayTimer(duration, element, callback, startSeconds = 0, isCurrent = true) {
   let minutes = duration;
   let seconds = startSeconds;
 
   element.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+  // Add the appropriate class to the timer element based on the current state
+  if (isCurrent) {
+    element.classList.add('current');
+    element.classList.remove('rest');
+  } else {
+    element.classList.add('rest');
+    element.classList.remove('current');
+  }
 
   let totalSeconds = minutes * 60 + seconds;
 
@@ -29,6 +38,7 @@ export function displayTimer(duration, element, callback, startSeconds = 0) {
   }, 1000);
 }
 
+// Function to start an activity
 export function startActivity(activityId) {
   const activity = getActivitiesFromLocalStorage().find(act => act.id === activityId);
   if (!activity) {
@@ -44,6 +54,7 @@ export function startActivity(activityId) {
   let currentExerciseIndex = 0;
   const restDuration = activity.restTime;
 
+  // Function to move to the next exercise
   function nextExercise() {
     if (currentExerciseIndex < activity.exercises.length) {
       const currentExercise = activity.exercises[currentExerciseIndex];
@@ -80,13 +91,14 @@ export function startActivity(activityId) {
 
       const exerciseDuration = parseInt(currentExercise.duration);
 
+      // Display the timer for the exercise
       displayTimer(exerciseDuration, timerContainer, () => {
         currentExerciseIndex++;
         updateProgress(exerciseDuration * 60);
         if (currentExerciseIndex < activity.exercises.length) {
           workoutTitleContainer.textContent = 'Rest Time';
           workoutInstructionsContainer.innerHTML = `<p>Take a ${restDuration} minute rest before the next exercise.</p>`;
-          displayTimer(restDuration, timerContainer, nextExercise);
+          displayTimer(restDuration, timerContainer, nextExercise, 0, false); // Pass false for isCurrent during rest time
         } else {
           updateProgress(0, null, true); // Update progress when workout is complete
           timerContainer.textContent = 'Workout Complete!';
@@ -100,11 +112,10 @@ export function startActivity(activityId) {
     }
   }
 
-
   nextExercise();
 }
 
-
+// Function to stop the activity
 export function stopActivity() {
   clearInterval(timerInterval);
   const timerText = document.querySelector('.timer').textContent;
@@ -112,7 +123,7 @@ export function stopActivity() {
   timeLeft = minutes * 60 + seconds;
 }
 
-
+// Function to continue the activity
 export function continueActivity(activityId) {
   const activity = getActivitiesFromLocalStorage().find(act => act.id === activityId);
   if (!activity) {
@@ -127,6 +138,7 @@ export function continueActivity(activityId) {
   const nextActivityContainer = document.querySelector('#next-activity');
   const restDuration = activity.restTime;
 
+  // Function to resume the exercise
   function resumeExercise() {
     if (currentExerciseIndex < activity.exercises.length) {
       const currentExercise = activity.exercises[currentExerciseIndex];
@@ -156,17 +168,16 @@ export function continueActivity(activityId) {
         workoutInstructionsContainer.textContent = 'No instructions available';
       }
 
-      // const exerciseDuration = parseInt(currentExercise.duration);
       const remainingMinutes = Math.floor(timeLeft / 60);
       const remainingSeconds = timeLeft % 60;
 
+      // Display the timer for the remaining exercise time
       displayTimer(remainingMinutes, timerContainer, () => {
         currentExerciseIndex++;
         if (currentExerciseIndex < activity.exercises.length) {
           workoutTitleContainer.textContent = 'Rest Time';
           workoutInstructionsContainer.innerHTML = `<p>Take a ${restDuration} minute rest before the next exercise.</p>`;
-          timeLeft = restDuration * 60; // Reset timeLeft to the full rest duration
-          displayTimer(restDuration, timerContainer, resumeExercise);
+          displayTimer(restDuration, timerContainer, resumeExercise, 0, false); // Pass false for isCurrent during rest time
         } else {
           updateProgress(0, null, true); // Update progress when workout is complete
           timerContainer.textContent = 'Workout Complete!';
@@ -186,8 +197,7 @@ export function continueActivity(activityId) {
     if (currentExerciseIndex < activity.exercises.length) {
       workoutTitleContainer.textContent = 'Rest Time';
       workoutInstructionsContainer.innerHTML = `<p>Take a ${restDuration} minute rest before the next exercise.</p>`;
-      timeLeft = restDuration * 60; // Reset timeLeft to the full rest duration
-      displayTimer(restDuration, timerContainer, resumeExercise);
+      displayTimer(restDuration, timerContainer, resumeExercise, 0, false); // Pass false for isCurrent during rest time
     } else {
       timerContainer.textContent = 'Workout Complete!';
       currentActivityContainer.textContent = '';

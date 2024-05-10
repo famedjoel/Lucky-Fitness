@@ -1104,3 +1104,12 @@ h1 {
 .home-container button:hover {
   background-color: #0056b3;
 }
+
+
+.timer.current {
+  background-color: green;
+}
+
+.timer.rest {
+  background-color: blue;
+}

@@ -1,17 +1,17 @@
 {
     "id": "LF",
     "name": "Lucky Fitness",
-    "short_name": "LF",
+    "short_name": "LuckFit",
     "description": "Lucky Fitness is a fitness app that helps you to stay fit and healthy.",
 "icons": [
     {
-        "src": "192.png",
+        "src": "./Asset/192.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
     },
       {
-        "src": "512.png",
+        "src": "./Asset/512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any"

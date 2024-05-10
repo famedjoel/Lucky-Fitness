@@ -7,7 +7,7 @@
     <script src="./scripts/index.mjs" type="module" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="192.png">
+    <link rel="shortcut icon" type="image/png" href="./Asset/192.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Section 1 -->
     <section class="section1">
         <h1>Lucky Fitness</h1>
         <section id="settings-icon">
@@ -29,6 +30,8 @@
             <button id="button5" class="nav-button" data-target="content5">Favorites</button>
         </section>
     </section>
+
+    <!-- Section 2 -->
     <section class="section2">
         <section class="button-container">
             <button id="button0" data-target="content0">Home</button>
@@ -36,8 +39,9 @@
             <button id="button2" data-target="content2">Customize HiiT</button>
             <button id="button4" data-target="content4">Saved HiiT</button>
             <button id="button3" data-target="content3">History</button>
-
         </section>
+
+        <!-- Content 0 -->
         <section id="content0" class="content">
             <p id="HC">Welcome to my Home Page</p>
             <section class="home-container">
@@ -64,6 +68,8 @@
                 <p> Have fun😁</p>
             </section>
         </section>
+
+        <!-- Content 1 -->
         <section id="content1" class="content hidden">
             <p>Welcome to my Exercise Page</p>
             <section class="search-container">
@@ -76,8 +82,9 @@
             <!-- "Show More Exercises" button -->
             <button id="show-more-btn">Show More Exercises</button>
             <!-- Hidden container for remaining exercises -->
-
         </section>
+
+        <!-- Content 2 -->
         <section id="content2" class="content hidden">
             <p id="workout-text">
                 Content for your Hiit Builder World...</p>
@@ -98,6 +105,17 @@
                 <button id="clear-activity-btn">Clear Workout</button>
             </section>
         </section>
+
+
+
+        <!-- Content 3 -->
+        <section id="content3" class="content hidden">
+            <h2>History</h2>
+            <p>Content for your History world...</p>
+            <ul id="history-list"></ul>
+        </section>
+
+        <!-- Content 4 -->
         <section id="content4" class="content hidden">
             <!-- <h2>Saved Hiit</h2> -->
             <p>Content for your Saved HiiT...</p>
@@ -121,18 +139,16 @@
                 <h3 id="workout-title"></h3>
                 <p id="workout-instructions"></p>
             </section>
-
         </section>
-        <section id="content3" class="content hidden">
-            <h2>History</h2>
-            <p>Content for your History world...</p>
 
-            <ul id="history-list"></ul>
-        </section>
+
+        <!-- Content 5 -->
         <section id="content5" class="content hidden">
             <h2>Favorite Exercises</h2>
             <section id="favorites-container"></section>
         </section>
+
+        <!-- Content 6 -->
         <section id="content6" class="content hidden">
             <h2>Progress Tracking</h2>
             <section id="progress-data">
@@ -141,10 +157,8 @@
                 <p>Estimated Total Calories Burned: <span id="total-calories-burned"></span> calories</p>
             </section>
         </section>
-
     </section>
-
-
+    <!-- template for the exercise -->
     <template id="temp-portrait">
         <section class="workout-portrait">
             <section class="exercise-info">
@@ -168,8 +182,6 @@
             </section>
         </section>
     </template>
-
-
 </body>
 
 </html>

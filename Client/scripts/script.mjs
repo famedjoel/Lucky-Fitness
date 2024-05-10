@@ -2,8 +2,23 @@ import { clearActivity, saveEditedActivity, saveActivity } from './activity.js';
 import { displayActivitiesInHistory } from './history.js';
 import { displayProgress } from './progress.js';
 import { displayFavorites } from './favorite.js';
-import { displayExercises, searchExercises, toggleHiddenExercises } from './HiiT.js';
+import { displayExercises, searchExercises, toggleHiddenExercises } from './hiit.js';
 
+// Function to toggle between light and dark mode
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+
+  // Save user preference to local storage
+  const isDarkMode = body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode);
+}
+
+// Check if dark mode preference is saved in local storage
+const savedDarkMode = localStorage.getItem('darkMode');
+if (savedDarkMode === 'true') {
+  document.body.classList.add('dark-mode');
+}
 
 const buttons = document.querySelectorAll('button[data-target^="content"]');
 
@@ -87,7 +102,6 @@ function handleContentClick(event) {
   }
 }
 
-
 // Add event listener for buttons with data-target attributes
 buttons.forEach(button => {
   button.addEventListener('click', handleContentClick);
@@ -137,7 +151,6 @@ function handleInitialURL() {
     initialButton.classList.add('active');
   }
 }
-
 
 // Add event listener for popstate to handle navigation using browser back/forward buttons
 window.addEventListener('popstate', function () {
@@ -194,30 +207,12 @@ window.addEventListener('popstate', function () {
   }
 });
 
-
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('save-changes-btn')) {
     const activityId = event.target.closest('[id]').id; // Get the ID of the nearest ancestor with an ID
     saveEditedActivity(activityId);
   }
 });
-
-
-// Function to toggle between light and dark mode
-function toggleDarkMode() {
-  const body = document.body;
-  body.classList.toggle('dark-mode');
-
-  // Save user preference to local storage
-  const isDarkMode = body.classList.contains('dark-mode');
-  localStorage.setItem('darkMode', isDarkMode);
-}
-
-// Check if dark mode preference is saved in local storage
-const savedDarkMode = localStorage.getItem('darkMode');
-if (savedDarkMode === 'true') {
-  document.body.classList.add('dark-mode');
-}
 
 function addEventListener() {
   document.querySelector('#save-activity-btn').addEventListener('click', saveActivity);
@@ -250,7 +245,6 @@ function addEventListener() {
     const hiitStationButton = document.querySelector('#button4[data-target="content4"]');
     hiitStationButton.classList.add('active');
   });
-
 
   document.addEventListener('DOMContentLoaded', handleInitialURL);
 }
