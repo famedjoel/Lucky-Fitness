@@ -506,6 +506,10 @@ h1 {
   color: white;
 }
 
+.dark-mode #HC {
+  color: white;
+}
+
 /* Saved HiiT styles */
 #content4 {
   text-align: center;
