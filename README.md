@@ -34,8 +34,8 @@ Alternatively, use Visual Studio Code's Live Server extension by clicking **Go L
 4. Start a HiiT workout
 5. Record Keeping
 6. Visual cues
-7. Rest during an Exercise
-8. Progress Tracking
+7. Progress Tracking
+8. Clear Workout
 
 # Description of the Features
 
@@ -107,49 +107,78 @@ It's quite straightforward: after creating your HIIT session, simply click 'Save
 ### Design
 For every workout created, users can easily start their session with the click of a button. I've also implemented detailed instructions for each exercise to guide them effectively. Additionally, to help users stay focused and informed, the app displays real-time updates on current activities and what’s coming up next.
 
-### Navigation
+## Record Keeping 
 
-- The bottom navigation bar includes buttons for quick access to other app features such as "History," "Home," and "MyVault."
-
-## Start, Reset, Stop the Timer Feature
-
-The "Start, Reset, Stop the Timer" feature in Lucky Fitness enhances the user's control during workouts. Users can initiate, reset, and stop the timer as needed, providing a more dynamic and interactive workout experience.
+The "record-keeping" basically a history page where users  keep track of their exercise workouts over time. This page displays a list of recorded workout sessions, showing the names of the workouts and providing users with the ability to delete entries and also redo that specific workout.
 
 ### Key Components
 
-- **Start Button**: Begins the timer based on the selected workout duration.
+- **Delete Functionality**: Each entry in the workout history includes a "Delete" button, enabling users to remove specific workouts they no longer wish to keep in their history.
 
-- **Stop Button**: Halts the ongoing timer, allowing users to pause their workout.
-
-- **Reset Button**: Clears the timer and resets it to the initial state.
+- **Redo Functionality**: Each past entry the user entered created the user can be able to redo it if they want fancy doing it.
 
 ### How it Works
 
-1. **Start Button**: Users click the "Start" button to initiate the timer based on the selected workout duration.
+Once you create your workout, refreshing the page will display your most recent entry in the history, complete with options to redo or delete it.
 
-2. **Stop Button**: Clicking the "Stop" button halts the ongoing timer, allowing users to pause their workout.
+### Design 
 
-3. **Reset Button**: The "Reset" button clears the timer, resetting it to the initial state.
+I implemented this feature because users may sometimes forget their past activities, so having a visible record of previous workouts helps them track their progress and maintain consistency.
 
-## Select the Instructions Feature
 
-The "Select the Instructions" feature in Lucky Fitness allows users to access and view detailed instructions for each exercise stored in their personal vault. Users can select an exercise from their vault, and the app will display step-by-step instructions to guide them through the workout.
+## Visual cues
+
+The "Visual cues" feature in Lucky Fitness allows users to access/see the app in a different way of their choice.
 
 ### Key Components
 
-- **MyVault Area**: Users can navigate to the "MyVault" area of the app to access their stored exercises.
+- **Light and dark Mode**: Users can put their screen in a light and dark mode.
 
-- **Exercise Selection**: Users can select a specific exercise from their vault to view detailed instructions.
-
-- **Step-by-Step Guidance**: The app provides step-by-step instructions for each selected exercise, aiding users in performing the workout correctly.
+- **Rests with a different colour**: Users can see the rest in different colour compared to the current activity.
 
 ### How it Works
 
-1. **Navigate to MyVault**: Users go to the "MyVault" area within the app.
+For light and dark mode, users can simply click on the sun or star icon to toggle between them. Additionally, various color options are available, allowing users to customize their display while working out.
 
-2. **Exercise Selection**: Within the "MyVault," users can see a list of their stored exercises. Clicking on a specific exercise will open detailed instructions.
+### Design
 
-3. **Step-by-Step Guidance**: The app displays clear and concise step-by-step instructions for the selected exercise, ensuring users perform the workout correctly.
+
+While designing the app, I realized that light and dark modes are standard features on mobile phones, so I decided to incorporate them, recognizing their potential benefits for users. Additionally, the idea of offering different color themes stemmed from a discussion with friends. Realizing its appeal, I decided to seriously pursue and implement this feature to enhance the user experience.
+
+## Progress Tracking
+
+The "Progress Tracking" feature in Lucky Fitness allows users to view their progress during the entire workouts they did while using the app.
+
+### Key Components
+
+- **Workouts Completed**: Users can see the total workouts while being in the app.
+- **Total Duration**: Users can see the total duration while being in the app.
+- **Estimated Total calories burnt**: Users can see the estimated calories burnt while being on the app.
+
+### How it Works
+
+
+The process is streamlined for ease of use: simply create your HIIT session, start it, complete it, and enter your accurate weight. Your progress will automatically be displayed, allowing you to track your results effortlessly.
+
+### Design
+
+While designing the app, I recognized the importance of users being able to easily track their progress without confusion. This led me to conduct research and explore innovative features. Consequently, I decided to incorporate a weight-tracking functionality, considering the primary goal of this HIIT app is to help users burn fat and lose weight effectively.
+
+## Clear Workout
+
+The "Clear Workout" feature in Lucky Fitness allows users to clear their current workout if they don't fancy it and create a new one.
+### Key Components
+
+- **Clear Workout Button**: Users can clear the workout they created
+  
+### How it Works
+
+It's easy to use: simply return to the "Customize HIIT" page and click "Clear Workout" to reset everything.
+
+### Design
+
+
+While designing the app, I acknowledged the varied preferences and moods of users, which can change frequently. To accommodate this, I added a feature allowing users to easily switch out exercises they find mundane for more engaging and challenging options. This flexibility enhances the user experience by catering to individual needs and keeping the workouts interesting.
 
 ---
 
