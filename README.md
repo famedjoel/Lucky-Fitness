@@ -1,7 +1,7 @@
 # Lucky-Fitness
 
 ## Description
-Lucky Fitness App is your ultimate companion on the journey to a healthier and luckier you. Achieve your fitness goals with personalized workouts, nutrition plans, and a touch of luck for motivation.
+Lucky Fitness App is your ultimate companion on the journey to a healthier and luckier you. Achieve your fitness goals with personalized workouts, nutrition plans, and a touch of luck for motivation. This app is designed for beginners who may not know which exercises are best for them but are willing to follow the guided workouts provided.
 
 
 ## Installation
