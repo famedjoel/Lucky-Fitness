@@ -270,4 +270,190 @@ With these changes, the timer element will have a green background color when di
 Remember to adjust the colors and styles in the CSS classes according to your preference.
 
     
-> Prompt
+### Prompt on when saved changes is clicked it doesn't seem to get updated in the history page
+
+> so basically when saved changes is clicked it deosnt seems to get updated in the history page
+It seems like the issue is that the saveEditedActivity function is updating the activity in local storage, but the changes are not being reflected in the history page.
+To fix this, you need to make sure that after updating the activity in local storage, you also update the corresponding activity element in the history page.
+Here's the updated saveEditedActivity function in the activity.js file:
+javascriptCopy codeexport function saveEditedActivity(activityId) {
+  const activityContainer = document.querySelector(`#${activityId}`);
+  const durationInputs = activityContainer.querySelectorAll('.workout-duration');
+  const activity = getActivitiesFromLocalStorage().find(act => act.id === activityId);
+
+  if (activity) {
+    activity.exercises.forEach((exercise, index) => {
+      // Update the duration based on the edited input fields
+      exercise.duration = durationInputs[index].value;
+    });
+
+    // Update the activity in local storage
+    updateActivityInLocalStorage(activity);
+
+    // Update the activity in the history page
+    const activityElement = document.querySelector(`#content3 section[id="${activityId}"]`);
+    if (activityElement) {
+      const exercisesList = activityElement.querySelector('ul');
+      exercisesList.innerHTML = ''; // Clear existing exercises
+
+      // Recreate the exercises list with updated durations
+      activity.exercises.forEach(exercise => {
+        const exerciseItem = document.createElement('li');
+        exerciseItem.textContent = `Exercise: ${exercise.title} (${exercise.duration} mins)`;
+        exercisesList.appendChild(exerciseItem);
+      });
+    }
+  } else {
+    console.error('Activity not found in local storage.');
+  }
+}
+In this updated version, after updating the activity in local storage, we find the corresponding activity element in the history page using the activityId. If the element is found, we clear the existing exercises list and recreate it with the updated exercise durations.
+This way, when the "Save Changes" button is clicked, the changes will be reflected in both the local storage and the history page.
+Make sure to update the activity.js file with this modified saveEditedActivity
+
+> first of all the issue is the updated one is not passed to the local storage
+Apologies for the confusion. Let's take a closer look at the issue and resolve it step by step.
+The problem seems to be that the updated activity is not being saved to the local storage correctly. To fix this, we need to ensure that the updateActivityInLocalStorage function is updating the activity in the local storage properly.
+Here's the updated updateActivityInLocalStorage function in the activity.js file:
+javascriptCopy codeexport function updateActivityInLocalStorage(updatedActivity) {
+  const activities = getActivitiesFromLocalStorage();
+  const activityIndex = activities.findIndex(act => act.id === updatedActivity.id);
+  if (activityIndex !== -1) {
+    activities[activityIndex] = updatedActivity;
+    localStorage.setItem('activities', JSON.stringify(activities));
+    displayActivitiesInHistory(); // Update the history page after updating the activity in local storage
+  } else {
+    console.error('Failed to find the activity in local storage.');
+  }
+}
+In this updated version, we find the index of the activity in the activities array using the findIndex method. If the activity is found (i.e., activityIndex is not -1), we update the activity at that index with the updatedActivity object. Then, we save the updated activities array back to the local storage using localStorage.setItem.
+Additionally, we call the displayActivitiesInHistory function to update the history page immediately after updating the activity in the local storage.
+Make sure to update the activity.js file with this modified updateActivityInLocalStorage function.
+Now, let's update the saveEditedActivity function to use the updated updateActivityInLocalStorage function:
+javascriptCopy codeexport function saveEditedActivity(activityId) {
+  const activityContainer = document.querySelector(`#${activityId}`);
+  const durationInputs = activityContainer.querySelectorAll('.workout-duration');
+  const activity = getActivitiesFromLocalStorage().find(act => act.id === activityId);
+
+  if (activity) {
+    activity.exercises.forEach((exercise, index) => {
+      // Update the duration based on the edited input fields
+      exercise.duration = durationInputs[index].value;
+    });
+
+    // Update the activity in local storage
+    updateActivityInLocalStorage(activity);
+  } else {
+    console.error('Activity not found in local storage.');
+  }
+}
+In this updated saveEditedActivity function, we simply call the updateActivityInLocalStorage function with the updated activity object.
+With these changes, when the "Save Changes" button is clicked, the updated activity will be saved to the local storage correctly, and the history page will be updated to reflect the changes.
+Please update the activity.js file with these modifications and let me know if you have any further questions or if the issue persists.
+
+>it seems the updated workout name is not passed to the localstorage when save changes is clicked
+You're right. In the saveEditedActivity function, the updated activity name is not being saved to the local storage. To fix this, you need to update the activity name in the activity object before saving it to the local storage.
+Here's the modified saveEditedActivity function:
+javascriptCopy codeexport function saveEditedActivity(activityId) {
+  const activityContainer = document.querySelector(`#${activityId}`);
+  const durationInputs = activityContainer.querySelectorAll('.workout-duration');
+  const activityNameInput = activityContainer.querySelector('input[type="text"]');
+  const activity = getActivitiesFromLocalStorage().find(act => act.id === activityId);
+
+  if (activity) {
+    activity.name = activityNameInput.value; // Update the activity name
+
+    activity.exercises.forEach((exercise, index) => {
+      // Update the duration based on the edited input fields
+      exercise.duration = durationInputs[index].value;
+    });
+
+    // Update the activity in local storage
+    updateActivityInLocalStorage(activity);
+
+    // Update the activity in the history page
+    const activityElement = document.querySelector(`#content3 section[id="${activityId}"]`);
+    if (activityElement) {
+      const activityHeading = activityElement.querySelector('h3');
+      activityHeading.textContent = `Workout Name: ${activity.name}`; // Update the activity name in the history page
+
+      const exercisesList = activityElement.querySelector('ul');
+      exercisesList.innerHTML = ''; // Clear existing exercises
+
+      // Recreate the exercises list with updated durations
+      activity.exercises.forEach(exercise => {
+        const exerciseItem = document.createElement('li');
+        exerciseItem.textContent = `Exercise: ${exercise.title} (${exercise.duration} mins)`;
+        exercisesList.appendChild(exerciseItem);
+      });
+    }
+  } else {
+    console.error('Activity not found in local storage.');
+  }
+}
+In this updated version, the following changes have been made:
+
+The activityNameInput is selected using activityContainer.querySelector('input[type="text"]') to get the input field that contains the activity name.
+The activity name is updated in the activity object using activity.name = activityNameInput.value; before saving it to the local storage.
+In the history page update section, the activityHeading is selected using activityElement.querySelector('h3'), and its text content is updated with the new activity name using activityHeading.textContent = Workout Name: ${activity.name};.
+
+With these changes, the updated activity name will be saved to the local storage and reflected in the history page when the "Save Changes" button is clicked.
+
+### Prompt on why my createlement(Section) is showing error at my displayActivitiesInHistory
+
+> (i pasted the code) and the error Uncaught ReferenceError: createElement is not defined
+at script.mjs:486:31
+at Array.forEach (<anonymous>)
+at displayActivitiesInHistory (script.mjs:485:14)
+at script.mjs:525:1
+
+The error message indicates that the createElement function is not defined. It seems like you are trying to use createElement without declaring or importing it.
+To fix this error, you can modify the displayActivitiesInHistory function to use document.createElement instead of just createElement. Here's the corrected version of the function:
+javascriptCopy codefunction displayActivitiesInHistory() {
+  const activities = getActivitiesFromLocalStorage();
+  const historyContent = document.querySelector('#content3');
+  historyContent.innerHTML = '';
+
+  activities.forEach(activity => {
+    const activityContainer = document.createElement('section');
+    activityContainer.classList.add('activity-container');
+
+    const activityHeading = document.createElement('h3');
+    activityHeading.textContent = `Workout Name: ${activity.name}`;
+    activityContainer.appendChild(activityHeading);
+
+    const activityIdHeading = document.createElement('p');
+    activityIdHeading.textContent = `Workout ID: ${activity.id}`;
+    activityContainer.appendChild(activityIdHeading);
+
+    const exercisesList = document.createElement('ul');
+    activity.exercises.forEach(exercise => {
+      const exerciseItem = document.createElement('li');
+      exerciseItem.textContent = `Exercise: ${exercise.title} (${exercise.duration} mins)`;
+      exercisesList.appendChild(exerciseItem);
+    });
+    activityContainer.appendChild(exercisesList);
+
+    const redoButton = document.createElement('button');
+    redoButton.classList.add('redo');
+    redoButton.textContent = 'Redo Workout';
+    redoButton.addEventListener('click', function () {
+      redoWorkout(activity);
+    });
+    activityContainer.appendChild(redoButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete Activity';
+    deleteButton.addEventListener('click', function () {
+      deleteActivityFromLocalStorage(activity.id);
+      displayActivitiesInHistory();
+    });
+    activityContainer.appendChild(deleteButton);
+
+    historyContent.appendChild(activityContainer);
+  });
+}
+In this corrected version, createElement is replaced with document.createElement to ensure that the function is properly defined and used.
+Make this change and the error should be resolved.
+
+
