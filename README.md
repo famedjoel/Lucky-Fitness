@@ -179,6 +179,11 @@ The "Progress Tracking" feature in Lucky Fitness allows users to view their prog
 - **Total Duration**: Users can see the total duration while being in the app.
 - **Estimated Total calories burnt**: Users can see the estimated calories burnt while being on the app.
 
+>I am calculating this by calories burned for an exercise are estimated using the MET value associated with that exercise. MET is a unit that estimates the energy cost of physical activities, which is used to calculate calories burned as follows:
+
+Calories Burned = MET × Weight in kilograms × Duration in hours
+
+
 ### How it Works
 
 

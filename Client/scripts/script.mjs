@@ -48,7 +48,6 @@ export function showContent(contentId) {
   });
 }
 
-// Function to handle clicks on buttons with data-target attributes
 function handleContentClick(event) {
   const target = event.target.dataset.target;
   let friendlyName;
@@ -86,8 +85,11 @@ function handleContentClick(event) {
     button.classList.remove('active');
   });
 
-  // Add the 'active' class to the clicked button
-  event.target.classList.add('active');
+  // Add the 'active' class to the corresponding button in the .button-container
+  const buttonContainerButton = document.querySelector(`.button-container button[data-target="${target}"]`);
+  if (buttonContainerButton) {
+    buttonContainerButton.classList.add('active');
+  }
 
   // Remove the 'active' class from all navbar buttons
   const navbarButtons = document.querySelectorAll('.navbar button');
@@ -99,6 +101,19 @@ function handleContentClick(event) {
   const targetButton = document.querySelector(`.navbar button[data-target="${target}"]`);
   if (targetButton) {
     targetButton.classList.add('active');
+  }
+
+  // Check if the clicked button is inside the home container
+  const isHomeContainerButton = event.target.closest('.home-container button');
+  if (isHomeContainerButton) {
+    // Remove the 'active' class from all buttons in the home container
+    const homeButtons = document.querySelectorAll('.home-container button');
+    homeButtons.forEach(button => {
+      button.classList.remove('active');
+    });
+
+    // Add the 'active' class to the clicked button in the home container
+    isHomeContainerButton.classList.add('active');
   }
 }
 

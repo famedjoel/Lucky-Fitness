@@ -359,7 +359,7 @@ h1 {
 
 /* Dark Mode styles for dropdown content */
 .dark-mode .dropdown-content {
-  background-color: white;
+  background-color: black;
 }
 
 /* Dark Mode styles for exercise info heading */
