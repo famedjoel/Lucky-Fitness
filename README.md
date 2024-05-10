@@ -26,6 +26,29 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
     ```
 Alternatively, use Visual Studio Code's Live Server extension by clicking **Go Live** in the bottom right corner of the status bar.
 
+> To install and use this web app, follow these simple steps:
+
+- Open your web browser and navigate to the URL where the web app is hosted.
+- In the browser's address bar, you will see a desktop-like icon. Click on that icon to access the installation options.
+- From the menu that appears, select the option to install the web app or add it to your home screen. The exact wording may vary depending on your browser.
+- If prompted, confirm the installation by clicking "Install" or "Add."
+- The web app will now be installed and accessible from your device's home screen or app launcher.
+
+
+> Accessing the Web App Locally
+> To access the web app on your local network, follow these steps:
+
+- Open the Command Prompt or Terminal on your computer.
+- Type ipconfig and press Enter to retrieve your network configuration information.
+- Look for the "IPv4 Address" under the network adapter you are using (e.g., Ethernet or Wi-Fi).
+- Take note of the IPv4 address, which will be in the format xxx.xxx.xxx.xxx.
+- Open your web browser and enter the following address in the URL bar:
+
+http://your-ipv4-address:8080
+
+Replace your-ipv4-address with the actual IPv4 address you obtained in step 4.
+The web app should now load in your browser. If you see a settings or configuration page, look for an option to add the web app to your home screen for easier access.
+
 # Features
 
 1. Customize HiiT Workout
