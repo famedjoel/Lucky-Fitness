@@ -124,8 +124,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     vertical-align: top;
-    background: linear-gradient(45deg, #3498db, #ffd700, #e74c3c);
-    /* transition: transform 0.9s ease-in-out; */
+    background: linear-gradient(to right, #E3EEEF, #B2C8CA);
 }
 
 .workout-portrait:hover {
@@ -308,11 +307,11 @@ h1 {
 }
 
 .dark-mode #exercises-list li strong {
-    color: #fff;
+    color: black;
 }
 
 .dark-mode #exercises-list li span {
-    color: #bbb;
+    color: black;
 }
 
 .dark-mode #exercises-list li p {
@@ -323,10 +322,149 @@ h1 {
     background: radial-gradient(circle, #333333, #000000);
 }
 .dark-mode .section2 p {
-    color: #ddd;
+    color: black;
 }
-/* Add other dark mode styles as needed */
 
+.dark-mode .workout-portrait {
+    background: linear-gradient(45deg, #333333, #000000);
+}
+
+.dark-mode .workout-portrait:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .workout-description {
+    color: #fff;
+}
+
+.dark-mode .workout-dropdown {
+    color: #fff;
+}
+
+.dark-mode .dropdown-content {
+    background-color: white;
+}
+
+.dark-mode .exercise-info h2 {
+    color: #fff;
+}
+
+.dark-mode .exercise-info p {
+    color: #ccc;
+}
+
+.dark-mode #HC {
+    color: #fff;
+}
+
+.dark-mode .home-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .home-container h1 {
+  color: #fff;
+}
+
+.dark-mode .home-container h1::after {
+  background-color: #fff;
+}
+
+.dark-mode .home-container p {
+  background-color: #444;
+  border-left-color: #fff;
+  color: white;
+}
+
+.dark-mode .home-container button {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode .home-container button:hover {
+  background-color: #ddd;
+}
+
+.dark-mode #activity-builder h2 {
+  color: black;
+}
+
+.dark-mode #activity-builder label {
+  color: black;
+}
+
+.dark-mode #activity-builder input {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #activity-info {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #workout-title{
+  color: black
+}
+
+.dark-mode #workout-instructions {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #content1 p {
+  color: #fff;
+}
+
+.dark-mode #content2 p {
+  color: #fff;
+}
+
+.dark-mode #content3 p {
+  color: #fff;
+}
+
+.dark-mode #content4 p {
+  color: #fff;
+}
+
+.dark-mode #content6 {
+  background-color: #1f1f1f;
+}
+
+.dark-mode #content6 h2 {
+  color: #fff;
+}
+
+.dark-mode #progress-data p {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode #progress-data span {
+  color: #fff;
+}
+
+.dark-mode .activity-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .activity-container h3 {
+  color: #fff;
+}
+
+.dark-mode .activity-container p {
+  color: #ccc;
+}
+
+.dark-mode .activity-container li {
+  color: white;
+}
+
+
+/* Add other dark mode styles as needed */
 
 /* Hiit Station styles */
 #content4 {
@@ -907,25 +1045,62 @@ h1 {
   cursor: pointer;
 }
 
-#share-link-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+.home-container {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-.share-link {
-  font-size: 14px;
-  word-wrap: break-word;
-  max-width: 80%;
-  background-color: #e0e0e0;
+.home-container h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.home-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #007bff;
+}
+
+.home-container p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 4px solid #007bff;
+  background-color: #fff;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home-container button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   margin-top: 10px;
 }
 
-.home-container {
-  background-color: white;
-  border-radius: 5px;
+.home-container button:hover {
+  background-color: #0056b3;
 }
